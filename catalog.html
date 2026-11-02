@@ -3,17 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Каталог — Орбита</title>
+  <title>Программы — Орбита</title>
   <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
     rel="stylesheet"
   >
   <link rel="stylesheet" href="css/custom.css">
 </head>
-<body class="bg-light">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<body>
+  <div class="alert alert-info alert-dismissible fade show rounded-0 mb-0 text-center" role="alert">
+    Посещение планетария по билетам. Справки по телефону +7 (000) 000-00-00.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">Орбита</a>
+      <a class="navbar-brand fw-bold" href="index.html">&#9733; Орбита</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -26,125 +30,181 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="mainNavbar">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Главная</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="catalog.html">Каталог</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="product.html">Услуга</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="order.html">Заявка</a>
-          </li>
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html#afisha">Афиша</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalog.html">Программы</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Услуги</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#news">Новости</a></li>
           <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Дополнительно
-            </a>
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Посетителям</a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="catalog.html">Все услуги</a></li>
+              <li><a class="dropdown-item" href="catalog.html">Все программы</a></li>
               <li><a class="dropdown-item" href="order.html">Записаться</a></li>
-              <li><a class="dropdown-item" href="index.html#popular">Популярное</a></li>
+              <li><a class="dropdown-item" href="#contacts">Контакты</a></li>
             </ul>
           </li>
         </ul>
+        <button class="btn btn-warning ms-lg-3 mt-2 mt-lg-0" type="button" data-bs-toggle="modal" data-bs-target="#ticketModal">Купить билет</button>
       </div>
     </div>
   </nav>
 
   <main class="container my-5">
-    <div class="alert alert-info" role="alert">
-      Выберите услугу из каталога. Карточки услуг оформлены с помощью компонента Bootstrap <code>card</code>.
-    </div>
-
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Программы</li>
+      </ol>
+    </nav>
     <div class="d-flex justify-content-between align-items-center mb-4">
-      <h1 class="h2 mb-0">Каталог услуг</h1>
+      <h1 class="h2 mb-0">Программы планетария</h1>
       <a class="btn btn-outline-primary" href="order.html">Записаться</a>
     </div>
-
     <div class="row g-4">
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm">
-          <img src="images/service-01.jpg" class="card-img-top" alt="Сеанс «Путешествие по Солнечной системе» — иллюстрация">
-          <div class="card-body d-flex flex-column">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <h2 class="card-title h5">Сеанс «Путешествие по Солнечной системе»</h2>
-              <span class="badge bg-warning text-dark">Хит</span>
-            </div>
-            <p class="card-text text-muted">Полнокупольный сеанс о планетах, спутниках и малых телах Солнечной системы. Подходит для детей от 6 лет.</p>
-            <p class="fw-bold fs-5 mt-auto">400 руб.</p>
-            <div class="d-flex gap-2">
-              <a class="btn btn-primary" href="product.html">Подробнее</a>
-              <button
-                class="btn btn-outline-primary"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#orderModal"
-              >
-                Записаться
-              </button>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="images/service-01.jpg" class="card-img-top" alt="Путешествие по Солнечной системе">
+            <div class="card-body d-flex flex-column">
+              <div><span class="badge bg-warning text-dark mb-2">Хит</span></div>
+              <h3 class="card-title h5">Путешествие по Солнечной системе</h3>
+              <p class="card-text text-muted">Полнокупольный сеанс о планетах, спутниках и малых телах Солнечной системы.</p>
+              <p class="small text-muted mb-2">45 мин · от 6 лет</p>
+              <p class="fw-bold fs-5 mt-auto mb-2">400 руб.</p>
+              <div class="d-flex gap-2">
+                <a class="btn btn-primary" href="product.html">Подробнее</a>
+              <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Записаться</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm">
-          <img src="images/service-02.jpg" class="card-img-top" alt="Лекция «Чёрные дыры» — иллюстрация">
-          <div class="card-body d-flex flex-column">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <h2 class="card-title h5">Лекция «Чёрные дыры»</h2>
-              <span class="badge bg-success">Новинка</span>
-            </div>
-            <p class="card-text text-muted">Популярная лекция о том, как рождаются чёрные дыры и почему они не пускают даже свет.</p>
-            <p class="fw-bold fs-5 mt-auto">600 руб.</p>
-            <div class="d-flex gap-2">
-              <a class="btn btn-primary" href="product.html">Подробнее</a>
-              <button
-                class="btn btn-outline-primary"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#orderModal"
-              >
-                Записаться
-              </button>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="images/black-hole.jpg" class="card-img-top" alt="Чёрные дыры">
+            <div class="card-body d-flex flex-column">
+              <div><span class="badge bg-success mb-2">Новинка</span></div>
+              <h3 class="card-title h5">Чёрные дыры</h3>
+              <p class="card-text text-muted">Лекция о том, как рождаются чёрные дыры и почему они не пускают даже свет.</p>
+              <p class="small text-muted mb-2">60 мин · от 12 лет</p>
+              <p class="fw-bold fs-5 mt-auto mb-2">600 руб.</p>
+              <div class="d-flex gap-2">
+                <a class="btn btn-primary" href="product.html">Подробнее</a>
+              <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Записаться</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card h-100 shadow-sm">
-          <img src="images/service-03.jpg" class="card-img-top" alt="Ночные наблюдения в телескоп — иллюстрация">
-          <div class="card-body d-flex flex-column">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <h2 class="card-title h5">Ночные наблюдения в телескоп</h2>
-              <span class="badge bg-danger">Скидка</span>
-            </div>
-            <p class="card-text text-muted">Наблюдения за Луной, планетами и звёздными скоплениями вместе с астрономом. Для студентов скидка 20%.</p>
-            <p class="fw-bold fs-5 mt-auto">900 руб.</p>
-            <div class="d-flex gap-2">
-              <a class="btn btn-primary" href="product.html">Подробнее</a>
-              <button
-                class="btn btn-outline-primary"
-                type="button"
-                data-bs-toggle="modal"
-                data-bs-target="#orderModal"
-              >
-                Записаться
-              </button>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="images/telescope.jpg" class="card-img-top" alt="Ночные наблюдения в телескоп">
+            <div class="card-body d-flex flex-column">
+              <div><span class="badge bg-danger mb-2">Скидка</span></div>
+              <h3 class="card-title h5">Ночные наблюдения в телескоп</h3>
+              <p class="card-text text-muted">Луна, планеты и звёздные скопления вместе с астрономом. Студентам скидка 20%.</p>
+              <p class="small text-muted mb-2">90 мин · от 10 лет</p>
+              <p class="fw-bold fs-5 mt-auto mb-2">900 руб.</p>
+              <div class="d-flex gap-2">
+                <a class="btn btn-primary" href="product.html">Подробнее</a>
+              <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Записаться</button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="images/galaxy.jpg" class="card-img-top" alt="Галактики и Большой взрыв">
+            <div class="card-body d-flex flex-column">
+              <div></div>
+              <h3 class="card-title h5">Галактики и Большой взрыв</h3>
+              <p class="card-text text-muted">Сеанс о том, как устроена Вселенная и как она появилась.</p>
+              <p class="small text-muted mb-2">50 мин · от 10 лет</p>
+              <p class="fw-bold fs-5 mt-auto mb-2">500 руб.</p>
+              <div class="d-flex gap-2">
+                <a class="btn btn-primary" href="product.html">Подробнее</a>
+              <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Записаться</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="images/moon.jpg" class="card-img-top" alt="Луна: наш ближайший сосед">
+            <div class="card-body d-flex flex-column">
+              <div></div>
+              <h3 class="card-title h5">Луна: наш ближайший сосед</h3>
+              <p class="card-text text-muted">Фазы, кратеры и история лунных экспедиций для самых маленьких.</p>
+              <p class="small text-muted mb-2">40 мин · от 5 лет</p>
+              <p class="fw-bold fs-5 mt-auto mb-2">350 руб.</p>
+              <div class="d-flex gap-2">
+                <a class="btn btn-primary" href="product.html">Подробнее</a>
+              <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Записаться</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="images/sun.jpg" class="card-img-top" alt="Наша звезда — Солнце">
+            <div class="card-body d-flex flex-column">
+              <div></div>
+              <h3 class="card-title h5">Наша звезда — Солнце</h3>
+              <p class="card-text text-muted">Вспышки, пятна и солнечный ветер: как Солнце влияет на Землю.</p>
+              <p class="small text-muted mb-2">45 мин · от 8 лет</p>
+              <p class="fw-bold fs-5 mt-auto mb-2">400 руб.</p>
+              <div class="d-flex gap-2">
+                <a class="btn btn-primary" href="product.html">Подробнее</a>
+              <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Записаться</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="images/saturn.jpg" class="card-img-top" alt="Сатурн и его кольца">
+            <div class="card-body d-flex flex-column">
+              <div></div>
+              <h3 class="card-title h5">Сатурн и его кольца</h3>
+              <p class="card-text text-muted">Путешествие к планете-гиганту и её загадочным спутникам.</p>
+              <p class="small text-muted mb-2">45 мин · от 7 лет</p>
+              <p class="fw-bold fs-5 mt-auto mb-2">450 руб.</p>
+              <div class="d-flex gap-2">
+                <a class="btn btn-primary" href="product.html">Подробнее</a>
+              <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Записаться</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="images/nebula.jpg" class="card-img-top" alt="Туманности: рождение звёзд">
+            <div class="card-body d-flex flex-column">
+              <div><span class="badge bg-success mb-2">Новинка</span></div>
+              <h3 class="card-title h5">Туманности: рождение звёзд</h3>
+              <p class="card-text text-muted">Яркие снимки телескопа «Хаббл» и рассказ о жизни звёзд.</p>
+              <p class="small text-muted mb-2">55 мин · от 12 лет</p>
+              <p class="fw-bold fs-5 mt-auto mb-2">550 руб.</p>
+              <div class="d-flex gap-2">
+                <a class="btn btn-primary" href="product.html">Подробнее</a>
+              <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Записаться</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm">
+            <img src="images/comet.jpg" class="card-img-top" alt="Кометы и астероиды">
+            <div class="card-body d-flex flex-column">
+              <div></div>
+              <h3 class="card-title h5">Кометы и астероиды</h3>
+              <p class="card-text text-muted">Что такое кометы, откуда они прилетают и опасны ли для Земли.</p>
+              <p class="small text-muted mb-2">40 мин · от 6 лет</p>
+              <p class="fw-bold fs-5 mt-auto mb-2">380 руб.</p>
+              <div class="d-flex gap-2">
+                <a class="btn btn-primary" href="product.html">Подробнее</a>
+              <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Записаться</button>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
   </main>
 
@@ -197,8 +257,96 @@
     </div>
   </div>
 
+  <footer class="bg-dark text-white py-5" id="contacts">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-12 col-md-4">
+          <h2 class="h5">&#9733; Орбита</h2>
+          <p class="text-white-50 mb-0">Планетарий и научный центр.</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <h2 class="h5">Контакты</h2>
+          <p class="mb-0">ул. Звёздная, 1<br>+7 (000) 000-00-00<br>info@orbita.example<br>Ежедневно с 10:00 до 20:00</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <h2 class="h5">Разделы</h2>
+          <ul class="list-unstyled mb-0">
+            <li><a class="text-white text-decoration-none" href="index.html#afisha">Афиша</a></li>
+            <li><a class="text-white text-decoration-none" href="catalog.html">Программы</a></li>
+            <li><a class="text-white text-decoration-none" href="services.html">Услуги</a></li>
+            <li><a class="text-white text-decoration-none" href="order.html">Заявка</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary">
+      <p class="mb-0 text-white-50 small">&copy; 2026 Орбита. Фото: NASA.</p>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="ticketModal" tabindex="-1" aria-labelledby="ticketModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <form id="ticketForm">
+          <div class="modal-header">
+            <h2 class="modal-title h5" id="ticketModalLabel">Покупка билета</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="ticket-program" class="form-label">Программа</label>
+              <select id="ticket-program" class="form-select" required>
+                <option value="1" data-price="400">Путешествие по Солнечной системе — 400 руб.</option>
+                <option value="2" data-price="600">Чёрные дыры — 600 руб.</option>
+                <option value="3" data-price="900">Ночные наблюдения в телескоп — 900 руб.</option>
+                <option value="4" data-price="500">Галактики и Большой взрыв — 500 руб.</option>
+                <option value="5" data-price="350">Луна: наш ближайший сосед — 350 руб.</option>
+                <option value="6" data-price="400">Наша звезда — Солнце — 400 руб.</option>
+                <option value="7" data-price="450">Сатурн и его кольца — 450 руб.</option>
+                <option value="8" data-price="550">Туманности: рождение звёзд — 550 руб.</option>
+                <option value="9" data-price="380">Кометы и астероиды — 380 руб.</option>
+              </select>
+            </div>
+            <div class="row g-3 mb-3">
+              <div class="col-7">
+                <label for="ticket-date" class="form-label">Дата</label>
+                <input id="ticket-date" type="date" class="form-control" required>
+              </div>
+              <div class="col-5">
+                <label for="ticket-time" class="form-label">Время</label>
+                <input id="ticket-time" type="time" class="form-control" required>
+              </div>
+            </div>
+            <div class="row g-3 mb-3">
+              <div class="col-6">
+                <label for="ticket-name" class="form-label">Имя</label>
+                <input id="ticket-name" type="text" class="form-control" required>
+              </div>
+              <div class="col-6">
+                <label for="ticket-phone" class="form-label">Телефон</label>
+                <input id="ticket-phone" type="tel" class="form-control" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="ticket-count" class="form-label">Количество билетов</label>
+              <input id="ticket-count" type="number" class="form-control" min="1" max="10" value="1" required>
+            </div>
+            <p class="fs-5 mb-0">Итого: <strong id="ticket-total">0 руб.</strong></p>
+            <div class="alert alert-success mt-3 mb-0 d-none" id="ticket-success" role="alert">
+              Билеты забронированы. Мы позвоним для подтверждения.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            <button type="submit" class="btn btn-warning">Купить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
   ></script>
+  <script src="js/tickets.js"></script>
 </body>
 </html>
