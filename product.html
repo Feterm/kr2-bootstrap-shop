@@ -34,7 +34,7 @@
           <li class="nav-item"><a class="nav-link" href="index.html#afisha">Афиша</a></li>
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalog.html">Программы</a></li>
           <li class="nav-item"><a class="nav-link" href="services.html">Услуги</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#news">Новости</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Посетителям</a>
             <ul class="dropdown-menu">
@@ -49,31 +49,30 @@
     </div>
   </nav>
 
-  <main class="container my-5">
+  <main class="container my-5" id="product-root">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
         <li class="breadcrumb-item"><a href="catalog.html">Программы</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Сеанс «Путешествие по Солнечной системе»</li>
+        <li class="breadcrumb-item active" aria-current="page" data-p="crumb">Программа</li>
       </ol>
     </nav>
 
     <div class="row g-4">
       <div class="col-12 col-lg-6">
-        <div class="card shadow-sm">
-          <img src="images/service-01.jpg" class="img-fluid rounded" alt="Сеанс «Путешествие по Солнечной системе» — иллюстрация">
+        <div class="card shadow-sm product-photo">
+          <img src="images/service-01.jpg" class="img-fluid rounded" alt="" data-p="img">
         </div>
       </div>
 
       <div class="col-12 col-lg-6">
-        <span class="badge bg-warning text-dark mb-3">Хит</span>
-        <h1 class="h2">Сеанс «Путешествие по Солнечной системе»</h1>
-        <p class="lead text-muted">
-          Увлекательное путешествие по Солнечной системе под куполом планетария: от Меркурия
-          до Нептуна, с рассказом о спутниках, кометах и астероидах.
-        </p>
-        <p class="fs-3 fw-bold">400 руб.</p>
+        <span class="badge bg-warning text-dark mb-3" data-p="badge">Хит</span>
+        <h1 class="h2" data-p="title"></h1>
+        <div class="mb-2" data-p="rating"></div>
+        <p class="lead text-muted" data-p="lead"></p>
+        <p class="fs-3 fw-bold" data-p="price"></p>
         <div class="d-flex flex-wrap gap-2 mb-4">
+          <button class="btn btn-warning btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#ticketModal" data-p="buy">Купить билет</button>
           <a class="btn btn-primary btn-lg" href="order.html">Записаться</a>
           <a class="btn btn-outline-secondary btn-lg" href="catalog.html">Все программы</a>
         </div>
@@ -84,46 +83,14 @@
       <h2 class="h4 mb-3">Характеристики</h2>
       <div class="table-responsive">
         <table class="table table-striped table-bordered align-middle bg-white">
-          <tbody>
-            <tr>
-              <th scope="row">Категория</th>
-              <td>Сеансы в планетарии</td>
-            </tr>
-            <tr>
-              <th scope="row">Цена</th>
-              <td>400 руб.</td>
-            </tr>
-            <tr>
-              <th scope="row">Наличие мест</th>
-              <td>Есть</td>
-            </tr>
-            <tr>
-              <th scope="row">Формат</th>
-              <td>Полнокупольный сеанс</td>
-            </tr>
-            <tr>
-              <th scope="row">Длительность</th>
-              <td>45 минут</td>
-            </tr>
-            <tr>
-              <th scope="row">Возраст</th>
-              <td>от 6 лет</td>
-            </tr>
-            <tr>
-              <th scope="row">Язык</th>
-              <td>Русский</td>
-            </tr>
-            <tr>
-              <th scope="row">Расписание</th>
-              <td>Ежедневно, 11:00–19:00</td>
-            </tr>
-            <tr>
-              <th scope="row">Вместимость зала</th>
-              <td>80 мест</td>
-            </tr>
-          </tbody>
+          <tbody data-p="rows"></tbody>
         </table>
       </div>
+    </section>
+
+    <section class="mt-5" id="reviews">
+      <h2 class="h4 mb-3">Отзывы (<span data-p="reviews-count"></span>)</h2>
+      <div class="reviews-block" data-reviews="auto"></div>
     </section>
 
     <section class="mt-5">
@@ -269,6 +236,9 @@
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
   ></script>
+  <script src="js/data.js"></script>
+  <script src="js/reviews.js"></script>
+  <script src="js/news.js"></script>
   <script src="js/dates.js"></script>
   <script src="js/tickets.js"></script>
 </body>

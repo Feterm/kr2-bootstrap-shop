@@ -34,7 +34,7 @@
           <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html#afisha">Афиша</a></li>
           <li class="nav-item"><a class="nav-link" href="catalog.html">Программы</a></li>
           <li class="nav-item"><a class="nav-link" href="services.html">Услуги</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#news">Новости</a></li>
+          <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Посетителям</a>
             <ul class="dropdown-menu">
@@ -607,29 +607,14 @@
 
     <section class="bg-white py-5" id="news">
       <div class="container">
-        <h2 class="mb-4">Новости</h2>
-        <div class="list-group">
-          <a href="catalog.html" class="list-group-item list-group-item-action">
-            <div class="small text-muted"><span data-days-ago="5">28 октября</span> · Новинка</div>
-            <div class="fw-semibold">Премьера сеанса «Туманности: рождение звёзд»</div>
-            <div class="text-muted">Новая программа с лучшими снимками телескопа «Хаббл».</div>
-          </a>
-          <a href="catalog.html" class="list-group-item list-group-item-action">
-            <div class="small text-muted"><span data-days-ago="13">20 октября</span> · Событие</div>
-            <div class="fw-semibold">Ночь астрономии в «Орбите»</div>
-            <div class="text-muted">Наблюдения в телескоп, лекции и мастер-классы до полуночи.</div>
-          </a>
-          <a href="catalog.html" class="list-group-item list-group-item-action">
-            <div class="small text-muted"><span data-days-ago="21">12 октября</span> · Лекторий</div>
-            <div class="fw-semibold">Лекция о чёрных дырах возвращается</div>
-            <div class="text-muted">Спрос оказался высоким, поэтому добавили новые даты.</div>
-          </a>
-          <a href="catalog.html" class="list-group-item list-group-item-action">
-            <div class="small text-muted"><span data-days-ago="32">1 октября</span> · Новости</div>
-            <div class="fw-semibold">Для школьников — новые экскурсии</div>
-            <div class="text-muted">Программы по астрономии для 5–11 классов.</div>
-          </a>
+        <div class="d-flex justify-content-between align-items-end flex-wrap gap-2 mb-4">
+          <div>
+            <h2 class="mb-1">Новости и события</h2>
+            <p class="text-muted mb-0">Что происходит в «Орбите»</p>
+          </div>
+          <a class="btn btn-outline-primary" href="news.html">Все новости</a>
         </div>
+        <div class="row g-4" data-news-list data-limit="6"></div>
       </div>
     </section>
 
@@ -831,6 +816,9 @@
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
   ></script>
+  <script src="js/data.js"></script>
+  <script src="js/reviews.js"></script>
+  <script src="js/news.js"></script>
   <script src="js/dates.js"></script>
   <script src="js/tickets.js"></script>
 </body>

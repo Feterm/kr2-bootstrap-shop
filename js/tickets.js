@@ -18,8 +18,8 @@ ticketModal.addEventListener('show.bs.modal', (event) => {
   successAlert.classList.add('d-none');
   if (data.program) {
     programSelect.value = data.program;
-    dateInput.value = data.date;
-    timeInput.value = data.time;
+    dateInput.value = data.date || window.localISO(new Date());
+    timeInput.value = data.time || '12:00';
   } else {
     dateInput.value = window.localISO(new Date());
     timeInput.value = '12:00';
