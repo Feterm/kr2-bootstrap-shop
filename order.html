@@ -12,7 +12,7 @@
 </head>
 <body>
   <div class="alert alert-info alert-dismissible fade show rounded-0 mb-0 text-center" role="alert">
-    Посещение планетария по билетам. Справки по телефону +7 (000) 000-00-00.
+    <span class="d-block d-md-inline">Сегодня: <strong data-live-clock></strong></span> <span class="d-none d-md-inline">·</span> Справки по телефону +7 (000) 000-00-00. <span class="badge bg-success ms-1" data-open-status>Сейчас открыто</span>
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
   </div>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -159,7 +159,7 @@
         </div>
       </div>
       <hr class="border-secondary">
-      <p class="mb-0 text-white-50 small">&copy; 2026 Орбита. Фото: NASA.</p>
+      <p class="mb-0 text-white-50 small">&copy; <span data-year>2026</span> Орбита. Фото: NASA.</p>
     </div>
   </footer>
 
@@ -227,6 +227,7 @@
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
   ></script>
+  <script src="js/dates.js"></script>
   <script src="js/tickets.js"></script>
 </body>
 </html>

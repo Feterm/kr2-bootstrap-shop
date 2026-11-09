@@ -53,3 +53,299 @@ body {
   background: #0d6efd;
   color: #fff;
 }
+
+/* ===== Дизайн: кнопки, hover, нажатие ===== */
+:root {
+  --orbita-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --orbita-gold: #ffc107;
+  --orbita-glow: rgba(255, 193, 7, 0.45);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+}
+
+.btn {
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-radius: 0.6rem;
+  transition:
+    transform 0.2s var(--orbita-ease),
+    box-shadow 0.2s var(--orbita-ease),
+    background-color 0.2s,
+    border-color 0.2s,
+    color 0.2s;
+}
+
+.btn:not(:disabled):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(13, 30, 70, 0.22);
+}
+
+.btn:not(:disabled):active {
+  transform: translateY(1px) scale(0.97);
+  box-shadow: 0 2px 5px rgba(13, 30, 70, 0.25) inset;
+  transition-duration: 0.06s;
+}
+
+.btn-warning:not(:disabled):hover {
+  background-color: #ffcd39;
+  box-shadow: 0 8px 22px var(--orbita-glow);
+}
+
+.btn-lg {
+  border-radius: 0.8rem;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Видимый фокус с клавиатуры */
+:focus-visible {
+  outline: 3px solid var(--orbita-gold);
+  outline-offset: 2px;
+}
+
+.btn:focus-visible,
+.nav-link:focus-visible {
+  box-shadow: 0 0 0 0.25rem var(--orbita-glow);
+}
+
+/* Навигация: подчёркивание при наведении */
+.navbar .nav-link {
+  position: relative;
+  transition: color 0.2s;
+}
+
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: 0.2rem;
+  height: 2px;
+  background: var(--orbita-gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s var(--orbita-ease);
+}
+
+.navbar .nav-link:hover::after,
+.navbar .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+.navbar .dropdown-toggle::after {
+  position: static;
+  background: none;
+  height: auto;
+  transform: none;
+}
+
+.dropdown-menu {
+  border: 0;
+  border-radius: 0.75rem;
+  box-shadow: 0 12px 30px rgba(13, 30, 70, 0.18);
+}
+
+.dropdown-item {
+  transition: background-color 0.15s, padding-left 0.2s var(--orbita-ease);
+}
+
+.dropdown-item:hover {
+  padding-left: 1.5rem;
+}
+
+/* Карточки программ и услуг */
+.card {
+  transition: transform 0.3s var(--orbita-ease), box-shadow 0.3s var(--orbita-ease);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 34px rgba(13, 30, 70, 0.2) !important;
+}
+
+.card-img-top {
+  transition: transform 0.5s var(--orbita-ease);
+}
+
+.card {
+  overflow: hidden;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.06);
+}
+
+.service-img {
+  transition: transform 0.5s var(--orbita-ease), filter 0.3s;
+}
+
+.service-card:hover .service-img {
+  transform: scale(1.08);
+  filter: brightness(0.8);
+}
+
+/* Строки афиши и новостей */
+.list-group-item {
+  transition: background-color 0.2s, transform 0.2s var(--orbita-ease), box-shadow 0.2s;
+}
+
+.schedule-days + .tab-content .list-group-item:hover {
+  background-color: #fffaf0;
+  transform: translateX(4px);
+}
+
+.list-group-item-action:hover {
+  transform: translateX(4px);
+}
+
+.thumb {
+  transition: transform 0.3s var(--orbita-ease);
+}
+
+.list-group-item:hover .thumb {
+  transform: scale(1.06);
+}
+
+/* Вкладки дней */
+.schedule-days .nav-link {
+  border-radius: 0.75rem;
+  transition:
+    transform 0.2s var(--orbita-ease),
+    box-shadow 0.2s,
+    background-color 0.2s,
+    border-color 0.2s;
+}
+
+.schedule-days .nav-link:hover:not(.active) {
+  border-color: #0d6efd;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(13, 110, 253, 0.18);
+}
+
+.schedule-days .nav-link:active {
+  transform: scale(0.96);
+}
+
+.schedule-days .nav-link.active {
+  box-shadow: 0 6px 16px rgba(13, 110, 253, 0.35);
+}
+
+/* Поля форм */
+.form-control,
+.form-select {
+  border-radius: 0.6rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:hover,
+.form-select:hover {
+  border-color: #86b7fe;
+}
+
+/* Ссылки в футере */
+footer a {
+  transition: color 0.2s, padding-left 0.2s var(--orbita-ease);
+}
+
+footer a:hover {
+  color: var(--orbita-gold) !important;
+  padding-left: 4px;
+}
+
+/* Часы в верхней строке */
+[data-live-clock] {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Отзывы */
+.review-carousel {
+  max-width: 760px;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 28px rgba(13, 30, 70, 0.1);
+  padding: 2.5rem 4rem 3.5rem;
+}
+
+.review-stars {
+  color: var(--orbita-gold);
+  font-size: 1.6rem;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.75rem;
+}
+
+.review-carousel .carousel-control-prev,
+.review-carousel .carousel-control-next {
+  width: 3.5rem;
+  transition: opacity 0.2s, transform 0.2s var(--orbita-ease);
+}
+
+.review-carousel .carousel-control-next:hover {
+  transform: translateX(3px);
+}
+
+.review-carousel .carousel-control-prev:hover {
+  transform: translateX(-3px);
+}
+
+@media (max-width: 575.98px) {
+  .review-carousel {
+    padding: 1.5rem 2.75rem 3rem;
+  }
+}
+
+/* FAQ */
+.faq-wrap {
+  max-width: 760px;
+}
+
+.accordion-item {
+  border-radius: 0.75rem !important;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+  border: 1px solid #dee2e6;
+}
+
+.accordion-button {
+  font-weight: 600;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.accordion-button:not(.collapsed) {
+  background: #fff8e1;
+  color: #212529;
+  box-shadow: none;
+}
+
+.accordion-button:hover:not(:not(.collapsed)) {
+  background: #fff8e1;
+}
+
+.accordion-button.collapsed:hover {
+  background: #f1f4fa;
+}
+
+/* Уважаем настройку «уменьшить анимацию» */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+
+  .btn:hover,
+  .card:hover,
+  .list-group-item:hover {
+    transform: none !important;
+  }
+}

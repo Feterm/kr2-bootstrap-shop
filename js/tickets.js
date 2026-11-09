@@ -21,7 +21,7 @@ ticketModal.addEventListener('show.bs.modal', (event) => {
     dateInput.value = data.date;
     timeInput.value = data.time;
   } else {
-    dateInput.value = new Date().toISOString().slice(0, 10);
+    dateInput.value = window.localISO(new Date());
     timeInput.value = '12:00';
   }
   updateTotal();

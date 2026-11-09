@@ -12,7 +12,7 @@
 </head>
 <body>
   <div class="alert alert-info alert-dismissible fade show rounded-0 mb-0 text-center" role="alert">
-    Посещение планетария по билетам. Справки по телефону +7 (000) 000-00-00.
+    <span class="d-block d-md-inline">Сегодня: <strong data-live-clock></strong></span> <span class="d-none d-md-inline">·</span> Справки по телефону +7 (000) 000-00-00. <span class="badge bg-success ms-1" data-open-status>Сейчас открыто</span>
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
   </div>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -548,7 +548,7 @@
     <section class="container my-5" id="services">
       <h2 class="mb-4">Планетарий также предлагает</h2>
       <div class="row g-4">
-        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="col-12 col-sm-6 col-lg-4">
           <a class="card service-card text-white border-0 h-100 text-decoration-none" href="services.html#service-1">
             <img src="images/kids.jpg" class="card-img service-img" alt="Школьные экскурсии">
             <div class="card-img-overlay d-flex flex-column justify-content-end">
@@ -557,7 +557,7 @@
             </div>
           </a>
         </div>
-        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="col-12 col-sm-6 col-lg-4">
           <a class="card service-card text-white border-0 h-100 text-decoration-none" href="services.html#service-2">
             <img src="images/night-sky.jpg" class="card-img service-img" alt="Дни рождения под звёздами">
             <div class="card-img-overlay d-flex flex-column justify-content-end">
@@ -566,7 +566,7 @@
             </div>
           </a>
         </div>
-        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="col-12 col-sm-6 col-lg-4">
           <a class="card service-card text-white border-0 h-100 text-decoration-none" href="services.html#service-3">
             <img src="images/cluster.jpg" class="card-img service-img" alt="Лекторий для взрослых">
             <div class="card-img-overlay d-flex flex-column justify-content-end">
@@ -575,12 +575,30 @@
             </div>
           </a>
         </div>
-        <div class="col-12 col-sm-6 col-lg-3">
+        <div class="col-12 col-sm-6 col-lg-4">
           <a class="card service-card text-white border-0 h-100 text-decoration-none" href="services.html#service-4">
             <img src="images/milky-way.jpg" class="card-img service-img" alt="Аренда зала">
             <div class="card-img-overlay d-flex flex-column justify-content-end">
               <h3 class="h5">Аренда зала</h3>
               <p class="small mb-0">Конференции и мероприятия под куполом.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <a class="card service-card text-white border-0 h-100 text-decoration-none" href="services.html#service-5">
+            <img src="images/solar-system.jpg" class="card-img service-img" alt="Мобильный планетарий">
+            <div class="card-img-overlay d-flex flex-column justify-content-end">
+              <h3 class="h5">Мобильный планетарий</h3>
+              <p class="small mb-0">Надувной купол приедет к вам в школу или детский сад.</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4">
+          <a class="card service-card text-white border-0 h-100 text-decoration-none" href="services.html#service-6">
+            <img src="images/service-02.jpg" class="card-img service-img" alt="Детский астрокружок">
+            <div class="card-img-overlay d-flex flex-column justify-content-end">
+              <h3 class="h5">Детский астрокружок</h3>
+              <p class="small mb-0">Занятия раз в неделю: телескоп, модели планет, опыты.</p>
             </div>
           </a>
         </div>
@@ -592,25 +610,115 @@
         <h2 class="mb-4">Новости</h2>
         <div class="list-group">
           <a href="catalog.html" class="list-group-item list-group-item-action">
-            <div class="small text-muted">28 октября · Новинка</div>
+            <div class="small text-muted"><span data-days-ago="5">28 октября</span> · Новинка</div>
             <div class="fw-semibold">Премьера сеанса «Туманности: рождение звёзд»</div>
             <div class="text-muted">Новая программа с лучшими снимками телескопа «Хаббл».</div>
           </a>
           <a href="catalog.html" class="list-group-item list-group-item-action">
-            <div class="small text-muted">20 октября · Событие</div>
+            <div class="small text-muted"><span data-days-ago="13">20 октября</span> · Событие</div>
             <div class="fw-semibold">Ночь астрономии в «Орбите»</div>
             <div class="text-muted">Наблюдения в телескоп, лекции и мастер-классы до полуночи.</div>
           </a>
           <a href="catalog.html" class="list-group-item list-group-item-action">
-            <div class="small text-muted">12 октября · Лекторий</div>
+            <div class="small text-muted"><span data-days-ago="21">12 октября</span> · Лекторий</div>
             <div class="fw-semibold">Лекция о чёрных дырах возвращается</div>
             <div class="text-muted">Спрос оказался высоким, поэтому добавили новые даты.</div>
           </a>
           <a href="catalog.html" class="list-group-item list-group-item-action">
-            <div class="small text-muted">1 октября · Новости</div>
+            <div class="small text-muted"><span data-days-ago="32">1 октября</span> · Новости</div>
             <div class="fw-semibold">Для школьников — новые экскурсии</div>
             <div class="text-muted">Программы по астрономии для 5–11 классов.</div>
           </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container my-5" id="reviews">
+      <h2 class="mb-4 text-center">Отзывы посетителей</h2>
+      <div id="reviewsCarousel" class="carousel carousel-dark slide review-carousel mx-auto" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Отзыв 1"></button>
+          <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="1" aria-label="Отзыв 2"></button>
+          <button type="button" data-bs-target="#reviewsCarousel" data-bs-slide-to="2" aria-label="Отзыв 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <figure class="review-card text-center mb-0">
+              <div class="review-stars" aria-label="Оценка 5 из 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote class="fs-5">Сын в восторге от «Чёрных дыр» — потом неделю задавал вопросы про горизонт событий. Купол и звук просто потрясающие.</blockquote>
+              <figcaption class="text-muted">Анна К., мама восьмиклассника</figcaption>
+            </figure>
+          </div>
+          <div class="carousel-item">
+            <figure class="review-card text-center mb-0">
+              <div class="review-stars" aria-label="Оценка 5 из 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+              <blockquote class="fs-5">Организовали школьную экскурсию для 28 человек. Астроном рассказывал так, что не отвлёкся ни один ребёнок.</blockquote>
+              <figcaption class="text-muted">Ирина Петровна, учитель физики</figcaption>
+            </figure>
+          </div>
+          <div class="carousel-item">
+            <figure class="review-card text-center mb-0">
+              <div class="review-stars" aria-label="Оценка 4 из 5">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+              <blockquote class="fs-5">Ночные наблюдения в телескоп — лучшее свидание за последние годы. Увидели кольца Сатурна своими глазами.</blockquote>
+              <figcaption class="text-muted">Дмитрий и Мария</figcaption>
+            </figure>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Назад</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Вперёд</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="bg-white py-5" id="faq">
+      <div class="container faq-wrap">
+        <h2 class="mb-4 text-center">Часто задаваемые вопросы</h2>
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-1" aria-expanded="true" aria-controls="faq-1">С какого возраста можно приходить на сеансы?</button>
+            </h3>
+            <div id="faq-1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Возрастное ограничение указано у каждой программы: самые мягкие сеансы — от 5 лет, лекции о чёрных дырах и туманностях — от 12.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-2" aria-expanded="false" aria-controls="faq-2">Нужно ли заранее покупать билеты?</button>
+            </h3>
+            <div id="faq-2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Рекомендуем: вечерние сеансы и выходные раскупают за несколько дней. Билет можно купить на сайте в пару кликов.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-3" aria-expanded="false" aria-controls="faq-3">Есть ли скидки?</button>
+            </h3>
+            <div id="faq-3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Студентам — 20% на ночные наблюдения, детям до 5 лет вход с родителями бесплатный, для школьных групп действуют специальные цены.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-4" aria-expanded="false" aria-controls="faq-4">Можно ли вернуть или перенести билет?</button>
+            </h3>
+            <div id="faq-4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">Да, не позднее чем за 3 часа до начала сеанса — позвоните нам, и мы перенесём билет на другую дату.</div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-5" aria-expanded="false" aria-controls="faq-5">Что, если погода плохая — наблюдения в телескоп отменят?</button>
+            </h3>
+            <div id="faq-5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">При облачности мы заменяем наблюдения лекцией и сеансом в куполе. Если вас это не устроит, вернём деньги.</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -655,7 +763,7 @@
         </div>
       </div>
       <hr class="border-secondary">
-      <p class="mb-0 text-white-50 small">&copy; 2026 Орбита. Фото: NASA.</p>
+      <p class="mb-0 text-white-50 small">&copy; <span data-year>2026</span> Орбита. Фото: NASA.</p>
     </div>
   </footer>
 
@@ -723,6 +831,7 @@
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
   ></script>
+  <script src="js/dates.js"></script>
   <script src="js/tickets.js"></script>
 </body>
 </html>
