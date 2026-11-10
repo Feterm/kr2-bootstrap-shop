@@ -16,11 +16,13 @@ ticketModal.addEventListener('show.bs.modal', (event) => {
   const data = event.relatedTarget ? event.relatedTarget.dataset : {};
   ticketForm.reset();
   successAlert.classList.add('d-none');
+  const productId = new URLSearchParams(location.search).get('id');
   if (data.program) {
     programSelect.value = data.program;
     dateInput.value = data.date || window.localISO(new Date());
     timeInput.value = data.time || '12:00';
   } else {
+    if (data.p === 'buy' && productId && programSelect.querySelector('option[value="' + productId + '"]')) programSelect.value = productId;
     dateInput.value = window.localISO(new Date());
     timeInput.value = '12:00';
   }

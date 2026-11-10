@@ -444,3 +444,16 @@ footer a:hover {
 .product-photo {
   overflow: hidden;
 }
+
+
+/* ===== Дополнительные функции каталога ===== */
+.catalog-tools { background: #fff; border-radius: 1rem; }
+.program-actions .btn { font-size: .78rem; padding: .35rem .55rem; }
+.program-actions .btn[aria-pressed="true"] { color: #fff; }
+.recent-card { color: inherit; overflow: hidden; border: 1px solid #e5e9f0; transition: transform .2s, box-shadow .2s; }
+.recent-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(13,30,70,.12); }
+.recent-card .card-img-top { height: 110px; object-fit: cover; }
+#compare-table-wrap th { min-width: 145px; }
+#compare-table-wrap td { min-width: 150px; }
+#seat-availability { font-size: .95rem; }
+@media (max-width: 575.98px) { .program-actions { flex-wrap: wrap; } .program-actions .btn { flex: 1 1 auto; } }

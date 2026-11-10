@@ -60,146 +60,190 @@
       <h1 class="h2 mb-0">Программы планетария</h1>
       <a class="btn btn-outline-primary" href="order.html">Записаться</a>
     </div>
+    <section class="catalog-tools card border-0 shadow-sm p-3 p-lg-4 mb-4" aria-label="Поиск и фильтры программ">
+      <div class="row g-3 align-items-end">
+        <div class="col-12 col-lg-4">
+          <label for="program-search" class="form-label fw-semibold">Поиск программы</label>
+          <input id="program-search" class="form-control" type="search" placeholder="Например, Сатурн или галактики">
+        </div>
+        <div class="col-6 col-lg-2">
+          <label for="program-category" class="form-label fw-semibold">Категория</label>
+          <select id="program-category" class="form-select"><option value="">Все категории</option><option>Сеансы в планетарии</option><option>Лекции</option><option>Наблюдения</option></select>
+        </div>
+        <div class="col-6 col-lg-2">
+          <label for="program-age" class="form-label fw-semibold">Возраст</label>
+          <select id="program-age" class="form-select"><option value="">Любой возраст</option><option value="6">От 6 лет</option><option value="8">От 8 лет</option><option value="10">От 10 лет</option><option value="12">От 12 лет</option></select>
+        </div>
+        <div class="col-6 col-lg-2">
+          <label for="program-sort" class="form-label fw-semibold">Сортировка</label>
+          <select id="program-sort" class="form-select"><option value="default">По умолчанию</option><option value="price-asc">Сначала дешевле</option><option value="price-desc">Сначала дороже</option><option value="age-asc">По возрасту</option><option value="duration-asc">По длительности</option></select>
+        </div>
+        <div class="col-6 col-lg-2">
+          <button class="btn btn-outline-secondary w-100" id="reset-program-filters" type="button">Сбросить</button>
+        </div>
+      </div>
+      <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mt-3">
+        <span class="small text-muted" id="program-results-count" aria-live="polite">Найдено программ: 9</span>
+        <span class="small text-muted">Избранное: <strong id="favorites-count">0</strong> · Для сравнения: <strong id="compare-count">0/3</strong></span>
+      </div>
+    </section>
+    <section id="recently-viewed-section" class="mb-4 d-none">
+      <div class="d-flex justify-content-between align-items-center mb-3"><h2 class="h4 mb-0">Недавно просмотренные</h2><button class="btn btn-sm btn-outline-secondary" id="clear-recently-viewed" type="button">Очистить историю</button></div>
+      <div class="row g-3" id="recently-viewed-list"></div>
+    </section>
+    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+      <h2 class="h4 mb-0">Все программы</h2>
+      <button class="btn btn-outline-primary btn-sm" id="open-compare" type="button" disabled>Сравнить выбранные</button>
+    </div>
     <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm">
+        <div class="col-12 col-md-6 col-lg-4 program-col" data-program-id="1">
+          <div class="card h-100 shadow-sm" data-program-card="1">
             <img src="images/service-01.jpg" class="card-img-top" alt="Путешествие по Солнечной системе">
             <div class="card-body d-flex flex-column">
               <div><span class="badge bg-warning text-dark mb-2">Хит</span></div>
               <h3 class="card-title h5">Путешествие по Солнечной системе</h3>
+              <div class="program-actions d-flex gap-2 mb-2"><button class="btn btn-sm btn-outline-danger favorite-toggle" type="button" aria-pressed="false">♡ В избранное</button><button class="btn btn-sm btn-outline-secondary compare-toggle" type="button" aria-pressed="false">＋ Сравнить</button></div>
               <p class="card-text text-muted">Полнокупольный сеанс о планетах, спутниках и малых телах Солнечной системы.</p>
               <p class="small text-muted mb-2">45 мин · от 6 лет</p>
               <p class="fw-bold fs-5 mt-auto mb-2">400 руб.</p>
               <div class="d-flex gap-2">
-                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                <a class="btn btn-primary" href="product.html?id=1">Подробнее</a>
               <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Записаться</button>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm">
+        <div class="col-12 col-md-6 col-lg-4 program-col" data-program-id="2">
+          <div class="card h-100 shadow-sm" data-program-card="2">
             <img src="images/black-hole.jpg" class="card-img-top" alt="Чёрные дыры">
             <div class="card-body d-flex flex-column">
               <div><span class="badge bg-success mb-2">Новинка</span></div>
               <h3 class="card-title h5">Чёрные дыры</h3>
+              <div class="program-actions d-flex gap-2 mb-2"><button class="btn btn-sm btn-outline-danger favorite-toggle" type="button" aria-pressed="false">♡ В избранное</button><button class="btn btn-sm btn-outline-secondary compare-toggle" type="button" aria-pressed="false">＋ Сравнить</button></div>
               <p class="card-text text-muted">Лекция о том, как рождаются чёрные дыры и почему они не пускают даже свет.</p>
               <p class="small text-muted mb-2">60 мин · от 12 лет</p>
               <p class="fw-bold fs-5 mt-auto mb-2">600 руб.</p>
               <div class="d-flex gap-2">
-                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                <a class="btn btn-primary" href="product.html?id=2">Подробнее</a>
               <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Записаться</button>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm">
+        <div class="col-12 col-md-6 col-lg-4 program-col" data-program-id="3">
+          <div class="card h-100 shadow-sm" data-program-card="3">
             <img src="images/telescope.jpg" class="card-img-top" alt="Ночные наблюдения в телескоп">
             <div class="card-body d-flex flex-column">
               <div><span class="badge bg-danger mb-2">Скидка</span></div>
               <h3 class="card-title h5">Ночные наблюдения в телескоп</h3>
+              <div class="program-actions d-flex gap-2 mb-2"><button class="btn btn-sm btn-outline-danger favorite-toggle" type="button" aria-pressed="false">♡ В избранное</button><button class="btn btn-sm btn-outline-secondary compare-toggle" type="button" aria-pressed="false">＋ Сравнить</button></div>
               <p class="card-text text-muted">Луна, планеты и звёздные скопления вместе с астрономом. Студентам скидка 20%.</p>
               <p class="small text-muted mb-2">90 мин · от 10 лет</p>
               <p class="fw-bold fs-5 mt-auto mb-2">900 руб.</p>
               <div class="d-flex gap-2">
-                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                <a class="btn btn-primary" href="product.html?id=3">Подробнее</a>
               <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Записаться</button>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm">
+        <div class="col-12 col-md-6 col-lg-4 program-col" data-program-id="4">
+          <div class="card h-100 shadow-sm" data-program-card="4">
             <img src="images/galaxy.jpg" class="card-img-top" alt="Галактики и Большой взрыв">
             <div class="card-body d-flex flex-column">
               <div></div>
               <h3 class="card-title h5">Галактики и Большой взрыв</h3>
+              <div class="program-actions d-flex gap-2 mb-2"><button class="btn btn-sm btn-outline-danger favorite-toggle" type="button" aria-pressed="false">♡ В избранное</button><button class="btn btn-sm btn-outline-secondary compare-toggle" type="button" aria-pressed="false">＋ Сравнить</button></div>
               <p class="card-text text-muted">Сеанс о том, как устроена Вселенная и как она появилась.</p>
               <p class="small text-muted mb-2">50 мин · от 10 лет</p>
               <p class="fw-bold fs-5 mt-auto mb-2">500 руб.</p>
               <div class="d-flex gap-2">
-                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                <a class="btn btn-primary" href="product.html?id=4">Подробнее</a>
               <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Записаться</button>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm">
+        <div class="col-12 col-md-6 col-lg-4 program-col" data-program-id="5">
+          <div class="card h-100 shadow-sm" data-program-card="5">
             <img src="images/moon.jpg" class="card-img-top" alt="Луна: наш ближайший сосед">
             <div class="card-body d-flex flex-column">
               <div></div>
               <h3 class="card-title h5">Луна: наш ближайший сосед</h3>
+              <div class="program-actions d-flex gap-2 mb-2"><button class="btn btn-sm btn-outline-danger favorite-toggle" type="button" aria-pressed="false">♡ В избранное</button><button class="btn btn-sm btn-outline-secondary compare-toggle" type="button" aria-pressed="false">＋ Сравнить</button></div>
               <p class="card-text text-muted">Фазы, кратеры и история лунных экспедиций для самых маленьких.</p>
               <p class="small text-muted mb-2">40 мин · от 5 лет</p>
               <p class="fw-bold fs-5 mt-auto mb-2">350 руб.</p>
               <div class="d-flex gap-2">
-                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                <a class="btn btn-primary" href="product.html?id=5">Подробнее</a>
               <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Записаться</button>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm">
+        <div class="col-12 col-md-6 col-lg-4 program-col" data-program-id="6">
+          <div class="card h-100 shadow-sm" data-program-card="6">
             <img src="images/sun.jpg" class="card-img-top" alt="Наша звезда — Солнце">
             <div class="card-body d-flex flex-column">
               <div></div>
               <h3 class="card-title h5">Наша звезда — Солнце</h3>
+              <div class="program-actions d-flex gap-2 mb-2"><button class="btn btn-sm btn-outline-danger favorite-toggle" type="button" aria-pressed="false">♡ В избранное</button><button class="btn btn-sm btn-outline-secondary compare-toggle" type="button" aria-pressed="false">＋ Сравнить</button></div>
               <p class="card-text text-muted">Вспышки, пятна и солнечный ветер: как Солнце влияет на Землю.</p>
               <p class="small text-muted mb-2">45 мин · от 8 лет</p>
               <p class="fw-bold fs-5 mt-auto mb-2">400 руб.</p>
               <div class="d-flex gap-2">
-                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                <a class="btn btn-primary" href="product.html?id=6">Подробнее</a>
               <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Записаться</button>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm">
+        <div class="col-12 col-md-6 col-lg-4 program-col" data-program-id="7">
+          <div class="card h-100 shadow-sm" data-program-card="7">
             <img src="images/saturn.jpg" class="card-img-top" alt="Сатурн и его кольца">
             <div class="card-body d-flex flex-column">
               <div></div>
               <h3 class="card-title h5">Сатурн и его кольца</h3>
+              <div class="program-actions d-flex gap-2 mb-2"><button class="btn btn-sm btn-outline-danger favorite-toggle" type="button" aria-pressed="false">♡ В избранное</button><button class="btn btn-sm btn-outline-secondary compare-toggle" type="button" aria-pressed="false">＋ Сравнить</button></div>
               <p class="card-text text-muted">Путешествие к планете-гиганту и её загадочным спутникам.</p>
               <p class="small text-muted mb-2">45 мин · от 7 лет</p>
               <p class="fw-bold fs-5 mt-auto mb-2">450 руб.</p>
               <div class="d-flex gap-2">
-                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                <a class="btn btn-primary" href="product.html?id=7">Подробнее</a>
               <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Записаться</button>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm">
+        <div class="col-12 col-md-6 col-lg-4 program-col" data-program-id="8">
+          <div class="card h-100 shadow-sm" data-program-card="8">
             <img src="images/nebula.jpg" class="card-img-top" alt="Туманности: рождение звёзд">
             <div class="card-body d-flex flex-column">
               <div><span class="badge bg-success mb-2">Новинка</span></div>
               <h3 class="card-title h5">Туманности: рождение звёзд</h3>
+              <div class="program-actions d-flex gap-2 mb-2"><button class="btn btn-sm btn-outline-danger favorite-toggle" type="button" aria-pressed="false">♡ В избранное</button><button class="btn btn-sm btn-outline-secondary compare-toggle" type="button" aria-pressed="false">＋ Сравнить</button></div>
               <p class="card-text text-muted">Яркие снимки телескопа «Хаббл» и рассказ о жизни звёзд.</p>
               <p class="small text-muted mb-2">55 мин · от 12 лет</p>
               <p class="fw-bold fs-5 mt-auto mb-2">550 руб.</p>
               <div class="d-flex gap-2">
-                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                <a class="btn btn-primary" href="product.html?id=8">Подробнее</a>
               <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Записаться</button>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="card h-100 shadow-sm">
+        <div class="col-12 col-md-6 col-lg-4 program-col" data-program-id="9">
+          <div class="card h-100 shadow-sm" data-program-card="9">
             <img src="images/comet.jpg" class="card-img-top" alt="Кометы и астероиды">
             <div class="card-body d-flex flex-column">
               <div></div>
               <h3 class="card-title h5">Кометы и астероиды</h3>
+              <div class="program-actions d-flex gap-2 mb-2"><button class="btn btn-sm btn-outline-danger favorite-toggle" type="button" aria-pressed="false">♡ В избранное</button><button class="btn btn-sm btn-outline-secondary compare-toggle" type="button" aria-pressed="false">＋ Сравнить</button></div>
               <p class="card-text text-muted">Что такое кометы, откуда они прилетают и опасны ли для Земли.</p>
               <p class="small text-muted mb-2">40 мин · от 6 лет</p>
               <p class="fw-bold fs-5 mt-auto mb-2">380 руб.</p>
               <div class="d-flex gap-2">
-                <a class="btn btn-primary" href="product.html">Подробнее</a>
+                <a class="btn btn-primary" href="product.html?id=9">Подробнее</a>
               <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#orderModal">Записаться</button>
               </div>
             </div>
@@ -207,6 +251,15 @@
         </div>
     </div>
   </main>
+
+
+  <div class="modal fade" id="compareModal" tabindex="-1" aria-labelledby="compareModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable"><div class="modal-content">
+      <div class="modal-header"><h2 class="modal-title h5" id="compareModalLabel">Сравнение программ</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button></div>
+      <div class="modal-body"><div id="compare-table-wrap" class="table-responsive"></div></div>
+      <div class="modal-footer"><button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Закрыть</button></div>
+    </div></div>
+  </div>
 
   <div
     class="modal fade"
@@ -330,6 +383,7 @@
               <label for="ticket-count" class="form-label">Количество билетов</label>
               <input id="ticket-count" type="number" class="form-control" min="1" max="10" value="1" required>
             </div>
+            <div class="alert alert-light border mt-3 mb-3" id="seat-availability" aria-live="polite"><strong>Свободные места:</strong> выберите дату и время.</div>
             <p class="fs-5 mb-0">Итого: <strong id="ticket-total">0 руб.</strong></p>
             <div class="alert alert-success mt-3 mb-0 d-none" id="ticket-success" role="alert">
               Билеты забронированы. Мы позвоним для подтверждения.
@@ -352,5 +406,7 @@
   <script src="js/news.js"></script>
   <script src="js/dates.js"></script>
   <script src="js/tickets.js"></script>
+  <script src="js/ticket-capacity.js"></script>
+  <script src="js/catalog-enhancements.js"></script>
 </body>
 </html>

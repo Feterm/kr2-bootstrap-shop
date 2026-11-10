@@ -219,6 +219,7 @@
               <label for="ticket-count" class="form-label">Количество билетов</label>
               <input id="ticket-count" type="number" class="form-control" min="1" max="10" value="1" required>
             </div>
+            <div class="alert alert-light border mt-3 mb-3" id="seat-availability" aria-live="polite"><strong>Свободные места:</strong> выберите дату и время.</div>
             <p class="fs-5 mb-0">Итого: <strong id="ticket-total">0 руб.</strong></p>
             <div class="alert alert-success mt-3 mb-0 d-none" id="ticket-success" role="alert">
               Билеты забронированы. Мы позвоним для подтверждения.
@@ -241,5 +242,7 @@
   <script src="js/news.js"></script>
   <script src="js/dates.js"></script>
   <script src="js/tickets.js"></script>
+  <script src="js/ticket-capacity.js"></script>
+  <script src="js/catalog-enhancements.js"></script>
 </body>
 </html>
