@@ -11,38 +11,27 @@
   <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-  <div class="alert alert-info alert-dismissible fade show rounded-0 mb-0 text-center" role="alert">
-    <span class="d-block d-md-inline">Сегодня: <strong data-live-clock></strong></span> <span class="d-none d-md-inline">·</span> Справки по телефону +7 (000) 000-00-00. <span class="badge bg-success ms-1" data-open-status>Сейчас открыто</span>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Закрыть"></button>
+  <div class="site-topline">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2 py-2">
+      <span><span class="topline-dot"></span> Открываем Вселенную вместе</span>
+      <div class="d-flex flex-wrap gap-3"><a href="tel:+74951234567">+7 (495) 123-45-67</a><a href="mailto:info@orbita-planetarium.example">info@orbita-planetarium.example</a></div>
+    </div>
   </div>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <nav class="navbar navbar-expand-lg navbar-dark site-navbar sticky-top">
     <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">&#9733; Орбита</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#mainNavbar"
-        aria-controls="mainNavbar"
-        aria-expanded="false"
-        aria-label="Переключить навигацию"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" aria-label="Орбита — главная">
+        <span class="brand-compass" aria-hidden="true"><svg viewBox="0 0 64 64" role="img"><circle cx="32" cy="32" r="27"/><circle cx="32" cy="32" r="21"/><path d="M32 7v8M32 49v8M7 32h8M49 32h8"/><path class="compass-needle" d="M40 18 35 35 18 46 29 29Z"/><circle class="compass-center" cx="32" cy="32" r="3"/></svg></span>
+        <span class="brand-copy"><span class="brand-name">ОРБИТА</span><span class="brand-caption">ПЛАНЕТАРИЙ · ПУТЕШЕСТВИЕ ПО ВСЕЛЕННОЙ</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="mainNavbar">
         <ul class="navbar-nav ms-auto align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="index.html#afisha">Афиша</a></li>
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="catalog.html">Программы</a></li>
+          <li class="nav-item"><a class="nav-link" href="catalog.html">Программы</a></li>
           <li class="nav-item"><a class="nav-link" href="services.html">Услуги</a></li>
           <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Посетителям</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="catalog.html">Все программы</a></li>
-              <li><a class="dropdown-item" href="order.html">Записаться</a></li>
-              <li><a class="dropdown-item" href="#contacts">Контакты</a></li>
-            </ul>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="index.html#about">О компании</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contacts">Контакты</a></li>
         </ul>
         <button class="btn btn-warning ms-lg-3 mt-2 mt-lg-0" type="button" data-bs-toggle="modal" data-bs-target="#ticketModal">Купить билет</button>
       </div>
@@ -146,29 +135,38 @@
     </section>
   </main>
 
-  <footer class="bg-dark text-white py-5" id="contacts">
-    <div class="container">
+  <footer class="site-footer" id="contacts">
+    <div class="container py-5">
       <div class="row g-4">
-        <div class="col-12 col-md-4">
-          <h2 class="h5">&#9733; Орбита</h2>
-          <p class="text-white-50 mb-0">Планетарий и научный центр.</p>
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-brand mb-3"><a class="footer-brand-link d-flex align-items-center gap-2" href="index.html" aria-label="Орбита — главная">
+        <span class="brand-compass" aria-hidden="true"><svg viewBox="0 0 64 64" role="img"><circle cx="32" cy="32" r="27"/><circle cx="32" cy="32" r="21"/><path d="M32 7v8M32 49v8M7 32h8M49 32h8"/><path class="compass-needle" d="M40 18 35 35 18 46 29 29Z"/><circle class="compass-center" cx="32" cy="32" r="3"/></svg></span>
+        <span class="brand-copy"><span class="brand-name">ОРБИТА</span><span class="brand-caption">ПЛАНЕТАРИЙ · ПУТЕШЕСТВИЕ ПО ВСЕЛЕННОЙ</span></span>
+      </a></div>
+          <p class="footer-description">Планетарий «Орбита» — пространство, где наука встречается с воображением. Помогаем детям и взрослым открывать космос через полнокупольные программы и живые впечатления.</p>
         </div>
-        <div class="col-12 col-md-4">
-          <h2 class="h5">Контакты</h2>
-          <p class="mb-0">ул. Звёздная, 1<br>+7 (000) 000-00-00<br>info@orbita.example<br>Ежедневно с 10:00 до 20:00</p>
+        <div class="col-lg-2 col-md-6">
+          <h2 class="footer-heading">Навигация</h2>
+          <ul class="footer-links"><li><a href="index.html#afisha">Афиша</a></li><li><a href="catalog.html">Программы</a></li><li><a href="services.html">Услуги</a></li><li><a href="news.html">Новости</a></li><li><a href="index.html#about">О компании</a></li></ul>
         </div>
-        <div class="col-12 col-md-4">
-          <h2 class="h5">Разделы</h2>
-          <ul class="list-unstyled mb-0">
-            <li><a class="text-white text-decoration-none" href="index.html#afisha">Афиша</a></li>
-            <li><a class="text-white text-decoration-none" href="catalog.html">Программы</a></li>
-            <li><a class="text-white text-decoration-none" href="services.html">Услуги</a></li>
-            <li><a class="text-white text-decoration-none" href="order.html">Заявка</a></li>
+        <div class="col-lg-3 col-md-6">
+          <h2 class="footer-heading">Контакты</h2>
+          <ul class="footer-contacts">
+            <li><span class="contact-symbol">⌖</span><span>Москва, ул. Звёздная, 1<br><a href="https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB.%20%D0%97%D0%B2%D1%91%D0%B7%D0%B4%D0%BD%D0%B0%D1%8F%2C%201" target="_blank" rel="noopener noreferrer">Открыть в Яндекс Картах ↗</a></span></li>
+            <li><span class="contact-symbol">☎</span><a href="tel:+74951234567">+7 (495) 123-45-67</a></li>
+            <li><span class="contact-symbol">✉</span><a href="mailto:info@orbita-planetarium.example">info@orbita-planetarium.example</a></li>
           </ul>
         </div>
+        <div class="col-lg-3 col-md-6">
+          <h2 class="footer-heading">Время работы</h2>
+          <p class="footer-hours mb-2">Ежедневно<br><strong>10:00–20:00</strong></p>
+          <a class="footer-map-button" href="https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB.%20%D0%97%D0%B2%D1%91%D0%B7%D0%B4%D0%BD%D0%B0%D1%8F%2C%201" target="_blank" rel="noopener noreferrer">Построить маршрут <span aria-hidden="true">↗</span></a>
+        </div>
       </div>
-      <hr class="border-secondary">
-      <p class="mb-0 text-white-50 small">&copy; <span data-year>2026</span> Орбита. Фото: NASA.</p>
+      <div class="footer-bottom mt-4 pt-3 d-flex flex-wrap justify-content-between gap-2">
+        <span>© 2026 Планетарий «Орбита». Учебный проект.</span>
+        <span>Контактные данные и адрес демонстрационные, перед реальным запуском их необходимо заменить.</span>
+      </div>
     </div>
   </footer>
 

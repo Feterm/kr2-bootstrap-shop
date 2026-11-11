@@ -457,3 +457,67 @@ footer a:hover {
 #compare-table-wrap td { min-width: 150px; }
 #seat-availability { font-size: .95rem; }
 @media (max-width: 575.98px) { .program-actions { flex-wrap: wrap; } .program-actions .btn { flex: 1 1 auto; } }
+
+
+/* ===== Единый фирменный стиль «Орбита»: компас и навигация ===== */
+:root {
+  --orbita-navy: #071a33;
+  --orbita-blue: #102b50;
+  --orbita-blue-soft: #183b65;
+  --orbita-gold: #f3bd45;
+  --orbita-cream: #f6f3eb;
+  --orbita-text: #17263b;
+}
+body { color: var(--orbita-text); background: #f7f8fb; }
+.site-topline { background: #06152a; color: #dce6f3; font-size: .82rem; }
+.site-topline a { color: #f3bd45; text-decoration: none; }
+.site-topline a:hover { color: #fff; }
+.topline-dot { display:inline-block; width:7px; height:7px; margin-right:.45rem; border-radius:50%; background:var(--orbita-gold); box-shadow:0 0 0 4px rgba(243,189,69,.14); }
+.site-navbar { background: linear-gradient(105deg, #0a1d37, #12345b); box-shadow: 0 8px 24px rgba(5,20,42,.18); }
+.site-navbar .navbar-brand { color:#fff; text-decoration:none; }
+.brand-compass { width:48px; height:48px; display:grid; place-items:center; border:1px solid rgba(243,189,69,.65); border-radius:50%; background:rgba(255,255,255,.04); }
+.brand-compass svg { width:39px; height:39px; fill:none; stroke:#f3bd45; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
+.brand-compass .compass-needle { fill:#f3bd45; stroke:#f3bd45; }
+.brand-compass .compass-center { fill:#fff; stroke:#fff; }
+.brand-copy { display:flex; flex-direction:column; line-height:1.05; }
+.brand-name { font-weight:800; letter-spacing:.19em; font-size:1.12rem; }
+.brand-caption { margin-top:5px; color:#c4d1e1; font-size:.52rem; letter-spacing:.105em; }
+.site-navbar .nav-link { color:#dce6f3; font-weight:500; padding-left:.75rem!important; padding-right:.75rem!important; }
+.site-navbar .nav-link:hover, .site-navbar .nav-link:focus { color:var(--orbita-gold); }
+.site-navbar .btn-warning { color:#17263b; background:var(--orbita-gold); border-color:var(--orbita-gold); }
+.hero { position:relative; background-position:center; }
+.hero .container { position:relative; z-index:1; }
+.about-section { background:var(--orbita-cream); }
+.section-eyebrow { color:#9a6a12; font-size:.75rem; font-weight:800; letter-spacing:.18em; }
+.about-lead { color:#203d61; font-size:1.2rem; font-weight:600; }
+.about-compass-art { min-height:300px; position:relative; display:flex; align-items:center; justify-content:center; overflow:hidden; border-radius:1.25rem; background:radial-gradient(circle at center, #244c77 0, #102b50 42%, #071a33 100%); color:var(--orbita-gold); }
+.about-orbit { position:absolute; width:235px; height:235px; border:1px solid rgba(243,189,69,.42); border-radius:50%; transform:rotate(-28deg) scaleY(.48); }
+.orbit-two { width:285px; height:285px; transform:rotate(48deg) scaleY(.48); border-color:rgba(220,230,243,.28); }
+.about-compass-mark { display:grid; place-items:center; width:118px; height:118px; border:2px solid var(--orbita-gold); border-radius:50%; font-size:5rem; line-height:1; text-shadow:0 0 24px rgba(243,189,69,.55); }
+.about-star { position:absolute; top:48px; right:22%; font-size:2rem; }
+.about-card-label { position:absolute; bottom:24px; font-size:.67rem; letter-spacing:.22em; color:#d8e2ef; }
+.about-fact { display:flex; flex-direction:column; border-left:3px solid var(--orbita-gold); padding-left:.75rem; }
+.about-fact strong { color:#102b50; }
+.about-fact span { color:#697789; font-size:.83rem; }
+.site-footer { color:#d9e3ef; background:linear-gradient(115deg,#06152a,#102b50); }
+.footer-brand-link { display:inline-flex; align-items:center; gap:.7rem; color:#fff; text-decoration:none; }
+.footer-brand-link .brand-compass { width:43px; height:43px; }
+.footer-brand-link .brand-compass svg { width:35px; height:35px; }
+.footer-brand-link .brand-name { color:#fff; }
+.footer-brand-link .brand-caption { color:#b8c8da; }
+.footer-description { max-width:390px; color:#b8c8da; font-size:.93rem; line-height:1.7; }
+.footer-heading { margin-bottom:1rem; color:#f3bd45; font-size:.9rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; }
+.footer-links, .footer-contacts { margin:0; padding:0; list-style:none; }
+.footer-links li { margin-bottom:.55rem; }
+.footer-links a, .footer-contacts a { color:#d9e3ef; text-decoration:none; }
+.footer-links a:hover, .footer-contacts a:hover { color:#f3bd45; }
+.footer-contacts li { display:flex; gap:.7rem; margin-bottom:.85rem; align-items:flex-start; }
+.footer-contacts li span:last-child { line-height:1.55; }
+.footer-contacts li span a:not(:first-child) { color:#f3bd45; }
+.contact-symbol { width:1.25rem; flex:0 0 1.25rem; color:#f3bd45; font-size:1.1rem; text-align:center; }
+.footer-hours { color:#b8c8da; line-height:1.7; }
+.footer-hours strong { color:#fff; font-size:1.2rem; }
+.footer-map-button { display:inline-flex; gap:.8rem; align-items:center; padding:.65rem .9rem; border:1px solid rgba(243,189,69,.7); border-radius:.55rem; color:#f3bd45; text-decoration:none; font-weight:600; }
+.footer-map-button:hover { color:#071a33; background:#f3bd45; }
+.footer-bottom { border-top:1px solid rgba(220,230,243,.18); color:#9fb0c4; font-size:.78rem; }
+@media (max-width: 575.98px) { .brand-caption { font-size:.43rem; } .brand-compass { width:42px; height:42px; } .about-compass-art { min-height:235px; } .site-topline .container { justify-content:center!important; } }
