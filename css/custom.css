@@ -713,3 +713,139 @@ footer.site-footer, .site-footer {
 .contact-info-panel a.btn-warning:hover {
   color:#10223a !important;
 }
+
+/* =========================================================
+   ORBITA: global theme switch, site search and user account
+   ========================================================= */
+:root {
+  --orbita-page-bg: #f4f6fa;
+  --orbita-surface: #ffffff;
+  --orbita-text: #172337;
+  --orbita-muted: #617086;
+  --orbita-border: #dce3ec;
+  --orbita-nav-bg: #0b203b;
+}
+html, body, .card, .modal-content, .list-group-item, .accordion-item,
+.form-control, .form-select, .dropdown-menu, .schedule-days .nav-link,
+.site-footer, .site-navbar, .about-teaser, .contact-info-panel {
+  transition: background-color .58s ease, color .58s ease, border-color .58s ease, box-shadow .58s ease;
+}
+body {
+  background-color: var(--orbita-page-bg);
+  color: var(--orbita-text);
+}
+.site-navbar { background: var(--orbita-nav-bg) !important; }
+.orbita-global-tools { flex-shrink: 0; }
+.orbita-icon-btn {
+  width: 38px; height: 38px; padding: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-size: 1.25rem; line-height: 1;
+}
+.orbita-icon-btn .theme-icon-sun { display: none; }
+html[data-orbita-theme="dark"] .orbita-icon-btn .theme-icon-moon { display: none; }
+html[data-orbita-theme="dark"] .orbita-icon-btn .theme-icon-sun { display: inline; }
+.orbita-account-link { white-space: nowrap; }
+
+/* A short radial shimmer makes the theme change feel deliberate, not abrupt. */
+body.orbita-theme-transition::after {
+  content: ""; position: fixed; inset: 0; z-index: 2000; pointer-events: none;
+  background: radial-gradient(circle at var(--theme-x, 90%) var(--theme-y, 8%), rgba(255,193,7,.22), transparent 38%);
+  animation: orbitaThemeSweep .72s ease-out forwards;
+}
+@keyframes orbitaThemeSweep {
+  0% { opacity: 0; transform: scale(.72); }
+  25% { opacity: 1; }
+  100% { opacity: 0; transform: scale(1.35); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* Search modal */
+.orbita-search-modal { border: 1px solid var(--orbita-border); border-radius: 1.1rem; overflow: hidden; background: var(--orbita-surface); color: var(--orbita-text); }
+.orbita-search-modal .modal-header { border-bottom-color: var(--orbita-border); }
+.orbita-search-results { display: grid; gap: .55rem; max-height: 52vh; overflow: auto; }
+.orbita-search-result {
+  display: grid; gap: .2rem; padding: .85rem 1rem; border: 1px solid var(--orbita-border);
+  border-radius: .75rem; text-decoration: none; color: var(--orbita-text); background: var(--orbita-page-bg);
+}
+.orbita-search-result:hover { border-color: var(--orbita-gold); color: var(--orbita-text); transform: translateX(3px); }
+.orbita-search-result-title { font-weight: 700; }
+.orbita-search-result-excerpt { color: var(--orbita-muted); font-size: .9rem; }
+.orbita-search-result small { color: #b18100; text-transform: capitalize; }
+.orbita-search-empty { padding: 1rem; border-radius: .75rem; background: var(--orbita-page-bg); color: var(--orbita-text); }
+
+/* Account */
+.account-panel, .account-page .card { background: var(--orbita-surface); color: var(--orbita-text); }
+.account-welcome { color: #fff; background: linear-gradient(125deg,#173d68,#071a33); border: 1px solid rgba(243,189,69,.28); }
+.account-stat { display: grid; gap: .25rem; padding: 1.15rem; border: 1px solid var(--orbita-border); border-radius: .9rem; background: var(--orbita-surface); color: var(--orbita-text); }
+.account-stat strong { font-size: 1.8rem; color: #c18b00; line-height: 1.1; }
+.account-stat span { color: var(--orbita-muted); font-size: .88rem; }
+.account-list { display: grid; gap: .6rem; }
+.account-list-item, .account-booking {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: .8rem .9rem; border: 1px solid var(--orbita-border); border-radius: .7rem;
+  color: var(--orbita-text); text-decoration: none; background: var(--orbita-page-bg);
+}
+.account-list-item span { color: #b18100; white-space: nowrap; font-size: .85rem; }
+.account-booking small { display: block; color: var(--orbita-muted); margin-top: .2rem; }
+.account-info-section { margin-bottom: 4rem; }
+
+/* Dark palette, including Bootstrap surfaces and custom sections. */
+html[data-orbita-theme="dark"] {
+  color-scheme: dark;
+  --orbita-page-bg: #0b1422;
+  --orbita-surface: #142238;
+  --orbita-text: #e8eef7;
+  --orbita-muted: #aab8ca;
+  --orbita-border: #2a3b52;
+  --orbita-nav-bg: #071323;
+}
+html[data-orbita-theme="dark"] body { background: var(--orbita-page-bg) !important; color: var(--orbita-text) !important; }
+html[data-orbita-theme="dark"] main { color: var(--orbita-text); }
+html[data-orbita-theme="dark"] .bg-white,
+html[data-orbita-theme="dark"] .card,
+html[data-orbita-theme="dark"] .modal-content,
+html[data-orbita-theme="dark"] .dropdown-menu,
+html[data-orbita-theme="dark"] .list-group-item,
+html[data-orbita-theme="dark"] .accordion-item,
+html[data-orbita-theme="dark"] .schedule-days .nav-link,
+html[data-orbita-theme="dark"] .account-stat,
+html[data-orbita-theme="dark"] .account-panel {
+  background-color: var(--orbita-surface) !important;
+  color: var(--orbita-text) !important;
+  border-color: var(--orbita-border) !important;
+}
+html[data-orbita-theme="dark"] .text-dark,
+html[data-orbita-theme="dark"] .card-title,
+html[data-orbita-theme="dark"] .card-text,
+html[data-orbita-theme="dark"] .accordion-button,
+html[data-orbita-theme="dark"] .dropdown-item,
+html[data-orbita-theme="dark"] label,
+html[data-orbita-theme="dark"] .form-label {
+  color: var(--orbita-text) !important;
+}
+html[data-orbita-theme="dark"] .text-muted,
+html[data-orbita-theme="dark"] .text-secondary { color: var(--orbita-muted) !important; }
+html[data-orbita-theme="dark"] .form-control,
+html[data-orbita-theme="dark"] .form-select {
+  background-color: #0e1b2d !important; color: var(--orbita-text) !important; border-color: var(--orbita-border) !important;
+}
+html[data-orbita-theme="dark"] .form-control::placeholder { color: #94a4b9; }
+html[data-orbita-theme="dark"] .accordion-button { background: #172840 !important; }
+html[data-orbita-theme="dark"] .accordion-button:not(.collapsed) { background: #203753 !important; }
+html[data-orbita-theme="dark"] .accordion-body { background: var(--orbita-surface); color: var(--orbita-text); }
+html[data-orbita-theme="dark"] .table { --bs-table-color: var(--orbita-text); --bs-table-bg: var(--orbita-surface); --bs-table-border-color: var(--orbita-border); }
+html[data-orbita-theme="dark"] .site-footer { background: #050d18 !important; color: #e8eef7 !important; }
+html[data-orbita-theme="dark"] .site-footer a { color: #f3c653; }
+html[data-orbita-theme="dark"] .about-teaser,
+html[data-orbita-theme="dark"] .contact-info-panel,
+html[data-orbita-theme="dark"] .orbit-highlight { background: linear-gradient(135deg,#0a1a2e,#050d18) !important; color: #f4f7fb !important; }
+html[data-orbita-theme="dark"] .orbit-highlight-light,
+html[data-orbita-theme="dark"] .orbit-mini-panel { background: #142238 !important; color: var(--orbita-text) !important; border-color: var(--orbita-border) !important; }
+html[data-orbita-theme="dark"] .orbit-highlight-light p,
+html[data-orbita-theme="dark"] .orbit-mini-panel p { color: var(--orbita-muted) !important; }
+html[data-orbita-theme="dark"] .btn-outline-secondary { color: #dbe5f2; border-color: #73849a; }
+html[data-orbita-theme="dark"] .schedule-days .nav-link.active { background: #c18b00; border-color: #c18b00; color: #101a29; }
+html[data-orbita-theme="dark"] .modal-backdrop { --bs-backdrop-bg: #020711; }
+html[data-orbita-theme="dark"] .btn-close { filter: invert(1) grayscale(100%); }

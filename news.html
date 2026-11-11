@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
 
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
 <html lang="ru">
-<head>
+<head><script data-orbita-theme-init="true">try{var t=localStorage.getItem('orbita-theme-v1');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-orbita-theme',t);else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.setAttribute('data-orbita-theme','dark');}catch(e){}</script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Новости и события — Орбита</title>
@@ -27,7 +33,13 @@
 <li class="nav-item"><a class="nav-link" href="index.html#contacts">Контакты</a></li>
 </ul>
 <button class="btn btn-warning ms-lg-3 mt-2 mt-lg-0" data-bs-target="#ticketModal" data-bs-toggle="modal" type="button">Купить билет</button>
-</div>
+<div class="orbita-global-tools d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0">
+<button aria-label="Включить тёмную тему" class="btn btn-outline-light btn-sm orbita-icon-btn" id="orbita-theme-toggle" title="Сменить тему" type="button">
+<span aria-hidden="true" class="theme-icon theme-icon-moon">☾</span><span aria-hidden="true" class="theme-icon theme-icon-sun">☀</span>
+</button>
+<button aria-label="Поиск по сайту" class="btn btn-outline-light btn-sm orbita-icon-btn" data-orbita-search-open="" title="Поиск" type="button"><span aria-hidden="true">⌕</span></button>
+<a aria-label="Личный кабинет" class="btn btn-outline-light btn-sm orbita-account-link" href="account.html"><span aria-hidden="true">♙</span><span class="d-lg-none ms-1">Личный кабинет</span></a>
+</div></div>
 </div>
 </nav>
 <main class="container my-5">
@@ -147,5 +159,19 @@
 <script src="js/dates.js"></script>
 <script src="js/tickets.js"></script>
 <script src="js/ticket-capacity.js"></script>
-</body>
+<div aria-hidden="true" aria-labelledby="orbitaSearchTitle" class="modal fade" id="orbitaSearchModal" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered modal-lg">
+<div class="modal-content orbita-search-modal">
+<div class="modal-header">
+<div><div class="section-eyebrow">НАВИГАЦИЯ ПО САЙТУ</div><h2 class="modal-title fs-4" id="orbitaSearchTitle">Что ищем во Вселенной?</h2></div>
+<button aria-label="Закрыть" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<label class="visually-hidden" for="orbitaSearchInput">Поиск по сайту</label>
+<input autocomplete="off" class="form-control form-control-lg" id="orbitaSearchInput" placeholder="Например: чёрные дыры, экскурсии, афиша..." type="search"/>
+<div aria-live="polite" class="orbita-search-results mt-3" id="orbitaSearchResults"><p class="text-muted mb-0">Введите запрос, чтобы найти программы, услуги и разделы сайта.</p></div>
+</div>
+</div>
+</div>
+</div><script src="js/theme.js"></script><script src="js/site-search-index.js"></script><script src="js/site-search.js"></script><script src="js/account.js"></script></body>
 </html>
