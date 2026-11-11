@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Афиша — Планетарий «Орбита»</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/custom.css" rel="stylesheet"/>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark site-navbar sticky-top"><div class="container"><a class="navbar-brand d-flex align-items-center gap-3" href="index.html"><img alt="Логотип-компас планетария Орбита" class="brand-logo" height="54" src="images/orbita-compass-logo.png" width="54"/><span class="brand-copy"><span class="brand-name">ОРБИТА</span><span class="brand-caption">ПЛАНЕТАРИЙ · ПУТЕШЕСТВИЕ ПО ВСЕЛЕННОЙ</span></span></a><button aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню" class="navbar-toggler" data-bs-target="#mainNavbar" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="mainNavbar"><ul class="navbar-nav ms-auto align-items-lg-center"><li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li><li class="nav-item"><a aria-current="page" class="nav-link active" href="afisha.html">Афиша</a></li><li class="nav-item"><a class="nav-link" href="catalog.html">Программы</a></li><li class="nav-item"><a class="nav-link" href="services.html">Услуги</a></li><li class="nav-item"><a class="nav-link" href="about.html">О компании</a></li><li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li></ul><a class="btn btn-warning ms-lg-3 mt-2 mt-lg-0" href="order.html">Купить билет</a></div></div></nav>
+<main><section class="container my-5"><span class="section-eyebrow">РАСПИСАНИЕ СЕАНСОВ</span><h1 class="display-5 fw-bold">Афиша планетария</h1><p class="lead">Выберите день и подходящий сеанс.</p></section>&lt;&gt;<section class="container my-5" id="afisha">
+<h2 class="mb-4">Афиша</h2>
+<ul class="nav nav-pills schedule-days flex-nowrap overflow-auto mb-4" role="tablist">
+<li class="nav-item" role="presentation">
+<button class="nav-link text-center active" data-bs-target="#day-0" data-bs-toggle="pill" role="tab" type="button">
+<span class="d-block small">Сегодня</span>
+<span class="d-block fw-bold">2 ноя</span>
+</button>
+</li>
+<li class="nav-item" role="presentation">
+<button class="nav-link text-center" data-bs-target="#day-1" data-bs-toggle="pill" role="tab" type="button">
+<span class="d-block small">Вт</span>
+<span class="d-block fw-bold">3 ноя</span>
+</button>
+</li>
+<li class="nav-item" role="presentation">
+<button class="nav-link text-center" data-bs-target="#day-2" data-bs-toggle="pill" role="tab" type="button">
+<span class="d-block small">Ср</span>
+<span class="d-block fw-bold">4 ноя</span>
+</button>
+</li>
+<li class="nav-item" role="presentation">
+<button class="nav-link text-center" data-bs-target="#day-3" data-bs-toggle="pill" role="tab" type="button">
+<span class="d-block small">Чт</span>
+<span class="d-block fw-bold">5 ноя</span>
+</button>
+</li>
+<li class="nav-item" role="presentation">
+<button class="nav-link text-center" data-bs-target="#day-4" data-bs-toggle="pill" role="tab" type="button">
+<span class="d-block small">Пт</span>
+<span class="d-block fw-bold">6 ноя</span>
+</button>
+</li>
+<li class="nav-item" role="presentation">
+<button class="nav-link text-center" data-bs-target="#day-5" data-bs-toggle="pill" role="tab" type="button">
+<span class="d-block small">Сб</span>
+<span class="d-block fw-bold">7 ноя</span>
+</button>
+</li>
+<li class="nav-item" role="presentation">
+<button class="nav-link text-center" data-bs-target="#day-6" data-bs-toggle="pill" role="tab" type="button">
+<span class="d-block small">Вс</span>
+<span class="d-block fw-bold">8 ноя</span>
+</button>
+</li>
+</ul>
+<div class="tab-content">
+<div class="tab-pane fade show active" id="day-0" role="tabpanel">
+<h3 class="h5 mb-3">Понедельник, 2 ноября</h3>
+<div class="list-group">
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">11:00</div>
+<img alt="Путешествие по Солнечной системе" class="thumb rounded" src="images/service-01.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Путешествие по Солнечной системе</div>
+<div class="small text-muted">45 мин · от 6 лет</div>
+</div>
+<div class="fw-bold">400 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-02" data-program="1" data-time="11:00" type="button">Купить билет</button>
+</div>
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">13:00</div>
+<img alt="Чёрные дыры" class="thumb rounded" src="images/black-hole.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Чёрные дыры</div>
+<div class="small text-muted">60 мин · от 12 лет</div>
+</div>
+<div class="fw-bold">600 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-02" data-program="2" data-time="13:00" type="button">Купить билет</button>
+</div>
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">15:30</div>
+<img alt="Галактики и Большой взрыв" class="thumb rounded" src="images/galaxy.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Галактики и Большой взрыв</div>
+<div class="small text-muted">50 мин · от 10 лет</div>
+</div>
+<div class="fw-bold">500 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-02" data-program="4" data-time="15:30" type="button">Купить билет</button>
+</div>
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">18:00</div>
+<img alt="Луна: наш ближайший сосед" class="thumb rounded" src="images/moon.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Луна: наш ближайший сосед</div>
+<div class="small text-muted">40 мин · от 5 лет</div>
+</div>
+<div class="fw-bold">350 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-02" data-program="5" data-time="18:00" type="button">Купить билет</button>
+</div>
+</div>
+</div>
+<div class="tab-pane fade" id="day-1" role="tabpanel">
+<h3 class="h5 mb-3">Вторник, 3 ноября</h3>
+<div class="list-group">
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">11:00</div>
+<img alt="Галактики и Большой взрыв" class="thumb rounded" src="images/galaxy.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Галактики и Большой взрыв</div>
+<div class="small text-muted">50 мин · от 10 лет</div>
+</div>
+<div class="fw-bold">500 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-03" data-program="4" data-time="11:00" type="button">Купить билет</button>
+</div>
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">13:00</div>
+<img alt="Луна: наш ближайший сосед" class="thumb rounded" src="images/moon.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Луна: наш ближайший сосед</div>
+<div class="small text-muted">40 мин · от 5 лет</div>
+</div>
+<div class="fw-bold">350 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-03" data-program="5" data-time="13:00" type="button">Купить билет</button>
+</div>
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">15:30</div>
+<img alt="Наша звезда — Солнце" class="thumb rounded" src="images/sun.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Наша звезда — Солнце</div>
+<div class="small text-muted">45 мин · от 8 лет</div>
+</div>
+<div class="fw-bold">400 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-03" data-program="6" data-time="15:30" type="button">Купить билет</button>
+</div>
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">18:00</div>
+<img alt="Сатурн и его кольца" class="thumb rounded" src="images/saturn.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Сатурн и его кольца</div>
+<div class="small text-muted">45 мин · от 7 лет</div>
+</div>
+<div class="fw-bold">450 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-03" data-program="7" data-time="18:00" type="button">Купить билет</button>
+</div>
+</div>
+</div>
+<div class="tab-pane fade" id="day-2" role="tabpanel">
+<h3 class="h5 mb-3">Среда, 4 ноября</h3>
+<div class="list-group">
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">11:00</div>
+<img alt="Наша звезда — Солнце" class="thumb rounded" src="images/sun.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Наша звезда — Солнце</div>
+<div class="small text-muted">45 мин · от 8 лет</div>
+</div>
+<div class="fw-bold">400 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-04" data-program="6" data-time="11:00" type="button">Купить билет</button>
+</div>
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">13:00</div>
+<img alt="Сатурн и его кольца" class="thumb rounded" src="images/saturn.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Сатурн и его кольца</div>
+<div class="small text-muted">45 мин · от 7 лет</div>
+</div>
+<div class="fw-bold">450 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-04" data-program="7" data-time="13:00" type="button">Купить билет</button>
+</div>
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">15:30</div>
+<img alt="Туманности: рождение звёзд" class="thumb rounded" src="images/nebula.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Туманности: рождение звёзд</div>
+<div class="small text-muted">55 мин · от 12 лет</div>
+</div>
+<div class="fw-bold">550 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-04" data-program="8" data-time="15:30" type="button">Купить билет</button>
+</div>
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">18:00</div>
+<img alt="Кометы и астероиды" class="thumb rounded" src="images/comet.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Кометы и астероиды</div>
+<div class="small text-muted">40 мин · от 6 лет</div>
+</div>
+<div class="fw-bold">380 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-04" data-program="9" data-time="18:00" type="button">Купить билет</button>
+</div>
+</div>
+</div>
+<div class="tab-pane fade" id="day-3" role="tabpanel">
+<h3 class="h5 mb-3">Четверг, 5 ноября</h3>
+<div class="list-group">
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">11:00</div>
+<img alt="Туманности: рождение звёзд" class="thumb rounded" src="images/nebula.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Туманности: рождение звёзд</div>
+<div class="small text-muted">55 мин · от 12 лет</div>
+</div>
+<div class="fw-bold">550 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-05" data-program="8" data-time="11:00" type="button">Купить билет</button>
+</div>
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">13:00</div>
+<img alt="Кометы и астероиды" class="thumb rounded" src="images/comet.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Кометы и астероиды</div>
+<div class="small text-muted">40 мин · от 6 лет</div>
+</div>
+<div class="fw-bold">380 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-05" data-program="9" data-time="13:00" type="button">Купить билет</button>
+</div>
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">15:30</div>
+<img alt="Путешествие по Солнечной системе" class="thumb rounded" src="images/service-01.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Путешествие по Солнечной системе</div>
+<div class="small text-muted">45 мин · от 6 лет</div>
+</div>
+<div class="fw-bold">400 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-05" data-program="1" data-time="15:30" type="button">Купить билет</button>
+</div>
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">18:00</div>
+<img alt="Чёрные дыры" class="thumb rounded" src="images/black-hole.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Чёрные дыры</div>
+<div class="small text-muted">60 мин · от 12 лет</div>
+</div>
+<div class="fw-bold">600 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-05" data-program="2" data-time="18:00" type="button">Купить билет</button>
+</div>
+</div>
+</div>
+<div class="tab-pane fade" id="day-4" role="tabpanel">
+<h3 class="h5 mb-3">Пятница, 6 ноября</h3>
+<div class="list-group">
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">11:00</div>
+<img alt="Путешествие по Солнечной системе" class="thumb rounded" src="images/service-01.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Путешествие по Солнечной системе</div>
+<div class="small text-muted">45 мин · от 6 лет</div>
+</div>
+<div class="fw-bold">400 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-06" data-program="1" data-time="11:00" type="button">Купить билет</button>
+</div>
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">13:00</div>
+<img alt="Чёрные дыры" class="thumb rounded" src="images/black-hole.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Чёрные дыры</div>
+<div class="small text-muted">60 мин · от 12 лет</div>
+</div>
+<div class="fw-bold">600 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-06" data-program="2" data-time="13:00" type="button">Купить билет</button>
+</div>
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">15:30</div>
+<img alt="Галактики и Большой взрыв" class="thumb rounded" src="images/galaxy.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Галактики и Большой взрыв</div>
+<div class="small text-muted">50 мин · от 10 лет</div>
+</div>
+<div class="fw-bold">500 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-06" data-program="4" data-time="15:30" type="button">Купить билет</button>
+</div>
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">18:00</div>
+<img alt="Луна: наш ближайший сосед" class="thumb rounded" src="images/moon.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Луна: наш ближайший сосед</div>
+<div class="small text-muted">40 мин · от 5 лет</div>
+</div>
+<div class="fw-bold">350 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-06" data-program="5" data-time="18:00" type="button">Купить билет</button>
+</div>
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">20:30</div>
+<img alt="Ночные наблюдения в телескоп" class="thumb rounded" src="images/telescope.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Ночные наблюдения в телескоп</div>
+<div class="small text-muted">90 мин · от 10 лет</div>
+</div>
+<div class="fw-bold">900 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-06" data-program="3" data-time="20:30" type="button">Купить билет</button>
+</div>
+</div>
+</div>
+<div class="tab-pane fade" id="day-5" role="tabpanel">
+<h3 class="h5 mb-3">Суббота, 7 ноября</h3>
+<div class="list-group">
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">11:00</div>
+<img alt="Галактики и Большой взрыв" class="thumb rounded" src="images/galaxy.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Галактики и Большой взрыв</div>
+<div class="small text-muted">50 мин · от 10 лет</div>
+</div>
+<div class="fw-bold">500 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-07" data-program="4" data-time="11:00" type="button">Купить билет</button>
+</div>
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">13:00</div>
+<img alt="Луна: наш ближайший сосед" class="thumb rounded" src="images/moon.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Луна: наш ближайший сосед</div>
+<div class="small text-muted">40 мин · от 5 лет</div>
+</div>
+<div class="fw-bold">350 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-07" data-program="5" data-time="13:00" type="button">Купить билет</button>
+</div>
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">15:30</div>
+<img alt="Наша звезда — Солнце" class="thumb rounded" src="images/sun.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Наша звезда — Солнце</div>
+<div class="small text-muted">45 мин · от 8 лет</div>
+</div>
+<div class="fw-bold">400 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-07" data-program="6" data-time="15:30" type="button">Купить билет</button>
+</div>
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">18:00</div>
+<img alt="Сатурн и его кольца" class="thumb rounded" src="images/saturn.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Сатурн и его кольца</div>
+<div class="small text-muted">45 мин · от 7 лет</div>
+</div>
+<div class="fw-bold">450 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-07" data-program="7" data-time="18:00" type="button">Купить билет</button>
+</div>
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">20:30</div>
+<img alt="Ночные наблюдения в телескоп" class="thumb rounded" src="images/telescope.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Ночные наблюдения в телескоп</div>
+<div class="small text-muted">90 мин · от 10 лет</div>
+</div>
+<div class="fw-bold">900 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-07" data-program="3" data-time="20:30" type="button">Купить билет</button>
+</div>
+</div>
+</div>
+<div class="tab-pane fade" id="day-6" role="tabpanel">
+<h3 class="h5 mb-3">Воскресенье, 8 ноября</h3>
+<div class="list-group">
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">11:00</div>
+<img alt="Наша звезда — Солнце" class="thumb rounded" src="images/sun.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Наша звезда — Солнце</div>
+<div class="small text-muted">45 мин · от 8 лет</div>
+</div>
+<div class="fw-bold">400 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-08" data-program="6" data-time="11:00" type="button">Купить билет</button>
+</div>
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">13:00</div>
+<img alt="Сатурн и его кольца" class="thumb rounded" src="images/saturn.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Сатурн и его кольца</div>
+<div class="small text-muted">45 мин · от 7 лет</div>
+</div>
+<div class="fw-bold">450 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-08" data-program="7" data-time="13:00" type="button">Купить билет</button>
+</div>
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">15:30</div>
+<img alt="Туманности: рождение звёзд" class="thumb rounded" src="images/nebula.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Туманности: рождение звёзд</div>
+<div class="small text-muted">55 мин · от 12 лет</div>
+</div>
+<div class="fw-bold">550 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-08" data-program="8" data-time="15:30" type="button">Купить билет</button>
+</div>
+<div class="list-group-item d-flex align-items-center gap-3 flex-wrap">
+<div class="fw-bold fs-4 time">18:00</div>
+<img alt="Кометы и астероиды" class="thumb rounded" src="images/comet.jpg"/>
+<div class="flex-grow-1">
+<div class="fw-semibold">Кометы и астероиды</div>
+<div class="small text-muted">40 мин · от 6 лет</div>
+</div>
+<div class="fw-bold">380 руб.</div>
+<button class="btn btn-sm btn-warning" data-bs-target="#ticketModal" data-bs-toggle="modal" data-date="2026-11-08" data-program="9" data-time="18:00" type="button">Купить билет</button>
+</div>
+</div>
+</div>
+</div>
+</section></main>
+<footer class="site-footer"><div class="container"><div class="row g-4 footer-main">
+<div class="col-12 col-lg-3"><a class="footer-brand-link d-flex align-items-center gap-3 text-decoration-none" href="index.html"><img alt="Логотип-компас планетария Орбита" class="brand-logo footer-logo" height="52" src="images/orbita-compass-logo.png" width="52"/><span class="brand-copy"><span class="brand-name">ОРБИТА</span><span class="brand-caption">ПЛАНЕТАРИЙ</span></span></a><p class="footer-description mt-3">Путешествие по Вселенной для детей и взрослых.</p></div>
+<div class="col-6 col-lg-2"><h2 class="footer-heading">Навигация</h2><ul class="footer-links"><li><a href="index.html">Главная</a></li><li><a href="afisha.html">Афиша</a></li><li><a href="catalog.html">Программы</a></li><li><a href="services.html">Услуги</a></li><li><a href="about.html">О компании</a></li><li><a href="contacts.html">Контакты</a></li></ul></div>
+<div class="col-6 col-lg-3"><h2 class="footer-heading">Контакты</h2><ul class="footer-contacts"><li><span class="contact-symbol">⌖</span><span>Москва, ул. Звёздная, 1</span></li><li><span class="contact-symbol">☎</span><span><a href="tel:+74951234567">+7 (495) 123-45-67</a><br/><small>Звонки ежедневно: 10:00–19:30</small></span></li><li><span class="contact-symbol">✉</span><a href="mailto:info@orbita-planetarium.example">info@orbita-planetarium.example</a></li></ul><a class="footer-map-button" href="contacts.html">Контакты и карта</a></div>
+<div class="col-12 col-lg-4"><h2 class="footer-heading">Время работы</h2><p class="footer-hours mb-3">Ежедневно<br/><strong>10:00–20:00</strong></p><a class="btn btn-warning" href="order.html">Купить билет</a></div></div>
+<div class="footer-bottom mt-4 pt-3 d-flex flex-wrap justify-content-between gap-2"><span>© 2026 Планетарий «Орбита». Все права защищены.</span><a href="contacts.html">Контакты</a></div></div></footer>
+<div aria-hidden="true" aria-labelledby="ticketModalLabel" class="modal fade" id="ticketModal" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<form id="ticketForm">
+<div class="modal-header">
+<h2 class="modal-title h5" id="ticketModalLabel">Покупка билета</h2>
+<button aria-label="Закрыть" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<div class="mb-3">
+<label class="form-label" for="ticket-program">Программа</label>
+<select class="form-select" id="ticket-program" required="">
+<option data-price="400" value="1">Путешествие по Солнечной системе — 400 руб.</option>
+<option data-price="600" value="2">Чёрные дыры — 600 руб.</option>
+<option data-price="900" value="3">Ночные наблюдения в телескоп — 900 руб.</option>
+<option data-price="500" value="4">Галактики и Большой взрыв — 500 руб.</option>
+<option data-price="350" value="5">Луна: наш ближайший сосед — 350 руб.</option>
+<option data-price="400" value="6">Наша звезда — Солнце — 400 руб.</option>
+<option data-price="450" value="7">Сатурн и его кольца — 450 руб.</option>
+<option data-price="550" value="8">Туманности: рождение звёзд — 550 руб.</option>
+<option data-price="380" value="9">Кометы и астероиды — 380 руб.</option>
+</select>
+</div>
+<div class="row g-3 mb-3">
+<div class="col-7">
+<label class="form-label" for="ticket-date">Дата</label>
+<input class="form-control" id="ticket-date" required="" type="date"/>
+</div>
+<div class="col-5">
+<label class="form-label" for="ticket-time">Время</label>
+<input class="form-control" id="ticket-time" required="" type="time"/>
+</div>
+</div>
+<div class="row g-3 mb-3">
+<div class="col-6">
+<label class="form-label" for="ticket-name">Имя</label>
+<input class="form-control" id="ticket-name" required="" type="text"/>
+</div>
+<div class="col-6">
+<label class="form-label" for="ticket-phone">Телефон</label>
+<input class="form-control" id="ticket-phone" required="" type="tel"/>
+</div>
+</div>
+<div class="mb-3">
+<label class="form-label" for="ticket-count">Количество билетов</label>
+<input class="form-control" id="ticket-count" max="10" min="1" required="" type="number" value="1"/>
+</div>
+<div aria-live="polite" class="alert alert-light border mt-3 mb-3" id="seat-availability"><strong>Свободные места:</strong> выберите дату и время.</div>
+<p class="fs-5 mb-0">Итого: <strong id="ticket-total">0 руб.</strong></p>
+<div class="alert alert-success mt-3 mb-0 d-none" id="ticket-success" role="alert">
+              Билеты забронированы. Мы позвоним для подтверждения.
+            </div>
+</div>
+<div class="modal-footer">
+<button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Закрыть</button>
+<button class="btn btn-warning" type="submit">Купить</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-labelledby="ticketModalLabel" class="modal fade" id="ticketModal" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<form id="ticketForm">
+<div class="modal-header">
+<h2 class="modal-title h5" id="ticketModalLabel">Покупка билета</h2>
+<button aria-label="Закрыть" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<div class="mb-3">
+<label class="form-label" for="ticket-program">Программа</label>
+<select class="form-select" id="ticket-program" required="">
+<option data-price="400" value="1">Путешествие по Солнечной системе — 400 руб.</option>
+<option data-price="600" value="2">Чёрные дыры — 600 руб.</option>
+<option data-price="900" value="3">Ночные наблюдения в телескоп — 900 руб.</option>
+<option data-price="500" value="4">Галактики и Большой взрыв — 500 руб.</option>
+<option data-price="350" value="5">Луна: наш ближайший сосед — 350 руб.</option>
+<option data-price="400" value="6">Наша звезда — Солнце — 400 руб.</option>
+<option data-price="450" value="7">Сатурн и его кольца — 450 руб.</option>
+<option data-price="550" value="8">Туманности: рождение звёзд — 550 руб.</option>
+<option data-price="380" value="9">Кометы и астероиды — 380 руб.</option>
+</select>
+</div>
+<div class="row g-3 mb-3">
+<div class="col-7">
+<label class="form-label" for="ticket-date">Дата</label>
+<input class="form-control" id="ticket-date" required="" type="date"/>
+</div>
+<div class="col-5">
+<label class="form-label" for="ticket-time">Время</label>
+<input class="form-control" id="ticket-time" required="" type="time"/>
+</div>
+</div>
+<div class="row g-3 mb-3">
+<div class="col-6">
+<label class="form-label" for="ticket-name">Имя</label>
+<input class="form-control" id="ticket-name" required="" type="text"/>
+</div>
+<div class="col-6">
+<label class="form-label" for="ticket-phone">Телефон</label>
+<input class="form-control" id="ticket-phone" required="" type="tel"/>
+</div>
+</div>
+<div class="mb-3">
+<label class="form-label" for="ticket-count">Количество билетов</label>
+<input class="form-control" id="ticket-count" max="10" min="1" required="" type="number" value="1"/>
+</div>
+<div aria-live="polite" class="alert alert-light border mt-3 mb-3" id="seat-availability"><strong>Свободные места:</strong> выберите дату и время.</div>
+<p class="fs-5 mb-0">Итого: <strong id="ticket-total">0 руб.</strong></p>
+<div class="alert alert-success mt-3 mb-0 d-none" id="ticket-success" role="alert">
+              Билеты забронированы. Мы позвоним для подтверждения.
+            </div>
+</div>
+<div class="modal-footer">
+<button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Закрыть</button>
+<button class="btn btn-warning" type="submit">Купить</button>
+</div>
+</form>
+</div>
+</div>
+</div><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script><script src="js/data.js"></script><script src="js/reviews.js"></script><script src="js/dates.js"></script><script src="js/tickets.js"></script><script src="js/ticket-capacity.js"></script></body>
+</html>

@@ -1,260 +1,203 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Услуги — Орбита</title>
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-  >
-  <link rel="stylesheet" href="css/custom.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Услуги — Орбита</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="css/custom.css" rel="stylesheet"/>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark site-navbar sticky-top">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-3" href="index.html" aria-label="Орбита — главная">
-        <img class="brand-logo" src="images/orbita-compass-logo.png" alt="" width="54" height="54">
-        <span class="brand-copy"><span class="brand-name">ОРБИТА</span><span class="brand-caption">ПЛАНЕТАРИЙ · ПУТЕШЕСТВИЕ ПО ВСЕЛЕННОЙ</span></span>
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse" id="mainNavbar">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item"><a class="nav-link" href="index.html#afisha">Афиша</a></li>
-          <li class="nav-item"><a class="nav-link" href="catalog.html">Программы</a></li>
-          <li class="nav-item"><a class="nav-link" href="services.html">Услуги</a></li>
-          <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#about">О компании</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#contacts">Контакты</a></li>
-        </ul>
-        <button class="btn btn-warning ms-lg-3 mt-2 mt-lg-0" type="button" data-bs-toggle="modal" data-bs-target="#ticketModal">Купить билет</button>
-      </div>
-    </div>
-  </nav>
-
-  <main class="container my-5">
-    <nav aria-label="breadcrumb">
-      <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Услуги</li>
-      </ol>
-    </nav>
-    <h1 class="mb-4">Планетарий также предлагает</h1>
-    <section class="row g-4 align-items-center mb-5" id="service-1">
-      <div class="col-12 col-lg-6">
-        <img src="images/kids.jpg" class="img-fluid rounded shadow-sm w-100 service-photo" alt="Школьные экскурсии">
-      </div>
-      <div class="col-12 col-lg-6">
-        <h2 class="h3">Школьные экскурсии</h2>
-        <p class="text-muted">Сеанс в куполе и рассказ астронома по школьной программе: от Солнечной системы для младших классов до устройства Вселенной для старших.</p>
-        <ul><li>Для 1–11 классов</li><li>Длительность 60 минут</li><li>Группа до 30 человек</li></ul>
-        <p class="fs-5 fw-bold">от 250 руб. с человека</p>
-        <a class="btn btn-primary me-2" href="order.html">Оставить заявку</a>
-        <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#sr-1" aria-expanded="false" aria-controls="sr-1" data-review-toggle="s1">Отзывы</button>
-      </div>
-      <div class="col-12">
-        <div class="collapse" id="sr-1">
-          <div class="reviews-block" data-reviews="s1"></div>
-        </div>
-      </div>
-    </section>
-    <section class="row g-4 align-items-center mb-5" id="service-2">
-      <div class="col-12 col-lg-6">
-        <img src="images/night-sky.jpg" class="img-fluid rounded shadow-sm w-100 service-photo" alt="Дни рождения под звёздами">
-      </div>
-      <div class="col-12 col-lg-6">
-        <h2 class="h3">Дни рождения под звёздами</h2>
-        <p class="text-muted">Ведущий проведёт сеанс о звёздах, а именинник получит подарок и сертификат на именную звезду.</p>
-        <ul><li>Праздник 90 минут</li><li>До 15 гостей</li><li>Сеанс в куполе и чаепитие</li></ul>
-        <p class="fs-5 fw-bold">от 8000 руб.</p>
-        <a class="btn btn-primary me-2" href="order.html">Оставить заявку</a>
-        <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#sr-2" aria-expanded="false" aria-controls="sr-2" data-review-toggle="s2">Отзывы</button>
-      </div>
-      <div class="col-12">
-        <div class="collapse" id="sr-2">
-          <div class="reviews-block" data-reviews="s2"></div>
-        </div>
-      </div>
-    </section>
-    <section class="row g-4 align-items-center mb-5" id="service-3">
-      <div class="col-12 col-lg-6">
-        <img src="images/cluster.jpg" class="img-fluid rounded shadow-sm w-100 service-photo" alt="Лекторий для взрослых">
-      </div>
-      <div class="col-12 col-lg-6">
-        <h2 class="h3">Лекторий для взрослых</h2>
-        <p class="text-muted">Астрономы и популяризаторы науки рассказывают о чёрных дырах, экзопланетах и истории космонавтики.</p>
-        <ul><li>Вечерние лекции</li><li>Раз в неделю</li><li>Вход свободный по билету</li></ul>
-        <p class="fs-5 fw-bold">500 руб. за лекцию</p>
-        <a class="btn btn-primary me-2" href="order.html">Оставить заявку</a>
-        <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#sr-3" aria-expanded="false" aria-controls="sr-3" data-review-toggle="s3">Отзывы</button>
-      </div>
-      <div class="col-12">
-        <div class="collapse" id="sr-3">
-          <div class="reviews-block" data-reviews="s3"></div>
-        </div>
-      </div>
-    </section>
-    <section class="row g-4 align-items-center mb-5" id="service-4">
-      <div class="col-12 col-lg-6">
-        <img src="images/milky-way.jpg" class="img-fluid rounded shadow-sm w-100 service-photo" alt="Аренда зала">
-      </div>
-      <div class="col-12 col-lg-6">
-        <h2 class="h3">Аренда зала</h2>
-        <p class="text-muted">Проведите презентацию, лекцию или показ фильма под куполом планетария.</p>
-        <ul><li>Зал на 80 мест</li><li>Проектор и звук</li><li>Подходит для конференций</li></ul>
-        <p class="fs-5 fw-bold">от 15000 руб. в час</p>
-        <a class="btn btn-primary me-2" href="order.html">Оставить заявку</a>
-        <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#sr-4" aria-expanded="false" aria-controls="sr-4" data-review-toggle="s4">Отзывы</button>
-      </div>
-      <div class="col-12">
-        <div class="collapse" id="sr-4">
-          <div class="reviews-block" data-reviews="s4"></div>
-        </div>
-      </div>
-    </section>
-    <section class="row g-4 align-items-center mb-5" id="service-5">
-      <div class="col-12 col-lg-6">
-        <img src="images/solar-system.jpg" class="img-fluid rounded shadow-sm w-100 service-photo" alt="Мобильный планетарий">
-      </div>
-      <div class="col-12 col-lg-6">
-        <h2 class="h3">Мобильный планетарий</h2>
-        <p class="text-muted">Надувной купол с проектором приедет в вашу школу, детский сад или на праздник и превратит обычный зал в звёздное небо.</p>
-        <ul><li>Купол на 25 человек</li><li>Сеанс 40 минут</li><li>Выезд по городу и области</li></ul>
-        <p class="fs-5 fw-bold">от 12000 руб. за выезд</p>
-        <a class="btn btn-primary me-2" href="order.html">Оставить заявку</a>
-        <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#sr-5" aria-expanded="false" aria-controls="sr-5" data-review-toggle="s5">Отзывы</button>
-      </div>
-      <div class="col-12">
-        <div class="collapse" id="sr-5">
-          <div class="reviews-block" data-reviews="s5"></div>
-        </div>
-      </div>
-    </section>
-    <section class="row g-4 align-items-center mb-5" id="service-6">
-      <div class="col-12 col-lg-6">
-        <img src="images/service-02.jpg" class="img-fluid rounded shadow-sm w-100 service-photo" alt="Детский астрокружок">
-      </div>
-      <div class="col-12 col-lg-6">
-        <h2 class="h3">Детский астрокружок</h2>
-        <p class="text-muted">Регулярные занятия для детей 7–12 лет: строим модели планет, ставим опыты и наблюдаем за небом в телескоп.</p>
-        <ul><li>Раз в неделю по 90 минут</li><li>Группа до 12 детей</li><li>Первое занятие пробное</li></ul>
-        <p class="fs-5 fw-bold">3200 руб. в месяц</p>
-        <a class="btn btn-primary me-2" href="order.html">Оставить заявку</a>
-        <button class="btn btn-outline-secondary" type="button" data-bs-toggle="collapse" data-bs-target="#sr-6" aria-expanded="false" aria-controls="sr-6" data-review-toggle="s6">Отзывы</button>
-      </div>
-      <div class="col-12">
-        <div class="collapse" id="sr-6">
-          <div class="reviews-block" data-reviews="s6"></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer" id="contacts">
-    <div class="container py-5">
-      <div class="row g-4">
-        <div class="col-lg-4 col-md-6">
-          <div class="footer-brand mb-3"><a class="footer-brand-link d-flex align-items-center gap-3" href="index.html" aria-label="Орбита — главная">
-        <img class="brand-logo footer-logo" src="images/orbita-compass-logo.png" alt="" width="48" height="48">
-        <span class="brand-copy"><span class="brand-name">ОРБИТА</span><span class="brand-caption">ПЛАНЕТАРИЙ</span></span>
-      </a></div>
-          <p class="footer-description">Планетарий «Орбита» — пространство, где наука встречается с воображением. Помогаем детям и взрослым открывать космос через полнокупольные программы и живые впечатления.</p>
-        </div>
-        <div class="col-lg-2 col-md-6">
-          <h2 class="footer-heading">Навигация</h2>
-          <ul class="footer-links"><li><a href="index.html#afisha">Афиша</a></li><li><a href="catalog.html">Программы</a></li><li><a href="services.html">Услуги</a></li><li><a href="news.html">Новости</a></li><li><a href="index.html#about">О компании</a></li></ul>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <h2 class="footer-heading">Контакты</h2>
-          <ul class="footer-contacts">
-            <li><span class="contact-symbol">⌖</span><span>Москва, ул. Звёздная, 1<br><a href="https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB.%20%D0%97%D0%B2%D1%91%D0%B7%D0%B4%D0%BD%D0%B0%D1%8F%2C%201" target="_blank" rel="noopener noreferrer">Открыть в Яндекс Картах ↗</a></span></li>
-            <li><span class="contact-symbol">☎</span><a href="tel:+74951234567">+7 (495) 123-45-67</a></li>
-            <li><span class="contact-symbol">✉</span><a href="mailto:info@orbita-planetarium.example">info@orbita-planetarium.example</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-3 col-md-6">
-          <h2 class="footer-heading">Время работы</h2>
-          <p class="footer-hours mb-2">Ежедневно<br><strong>10:00–20:00</strong></p>
-          <a class="footer-map-button" href="https://yandex.ru/maps/?text=%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0%2C%20%D1%83%D0%BB.%20%D0%97%D0%B2%D1%91%D0%B7%D0%B4%D0%BD%D0%B0%D1%8F%2C%201" target="_blank" rel="noopener noreferrer">Построить маршрут <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-      <div class="footer-bottom mt-4 pt-3 d-flex flex-wrap justify-content-between gap-2">
-        <span>© 2026 Планетарий «Орбита». Учебный проект.</span>
-        <span>Контактные данные и адрес демонстрационные, перед реальным запуском их необходимо заменить.</span>
-      </div>
-    </div>
-  </footer>
-
-  <div class="modal fade" id="ticketModal" tabindex="-1" aria-labelledby="ticketModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <form id="ticketForm">
-          <div class="modal-header">
-            <h2 class="modal-title h5" id="ticketModalLabel">Покупка билета</h2>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
-          </div>
-          <div class="modal-body">
-            <div class="mb-3">
-              <label for="ticket-program" class="form-label">Программа</label>
-              <select id="ticket-program" class="form-select" required>
-                <option value="1" data-price="400">Путешествие по Солнечной системе — 400 руб.</option>
-                <option value="2" data-price="600">Чёрные дыры — 600 руб.</option>
-                <option value="3" data-price="900">Ночные наблюдения в телескоп — 900 руб.</option>
-                <option value="4" data-price="500">Галактики и Большой взрыв — 500 руб.</option>
-                <option value="5" data-price="350">Луна: наш ближайший сосед — 350 руб.</option>
-                <option value="6" data-price="400">Наша звезда — Солнце — 400 руб.</option>
-                <option value="7" data-price="450">Сатурн и его кольца — 450 руб.</option>
-                <option value="8" data-price="550">Туманности: рождение звёзд — 550 руб.</option>
-                <option value="9" data-price="380">Кометы и астероиды — 380 руб.</option>
-              </select>
-            </div>
-            <div class="row g-3 mb-3">
-              <div class="col-7">
-                <label for="ticket-date" class="form-label">Дата</label>
-                <input id="ticket-date" type="date" class="form-control" required>
-              </div>
-              <div class="col-5">
-                <label for="ticket-time" class="form-label">Время</label>
-                <input id="ticket-time" type="time" class="form-control" required>
-              </div>
-            </div>
-            <div class="row g-3 mb-3">
-              <div class="col-6">
-                <label for="ticket-name" class="form-label">Имя</label>
-                <input id="ticket-name" type="text" class="form-control" required>
-              </div>
-              <div class="col-6">
-                <label for="ticket-phone" class="form-label">Телефон</label>
-                <input id="ticket-phone" type="tel" class="form-control" required>
-              </div>
-            </div>
-            <div class="mb-3">
-              <label for="ticket-count" class="form-label">Количество билетов</label>
-              <input id="ticket-count" type="number" class="form-control" min="1" max="10" value="1" required>
-            </div>
-            <div class="alert alert-light border mt-3 mb-3" id="seat-availability" aria-live="polite"><strong>Свободные места:</strong> выберите дату и время.</div>
-            <p class="fs-5 mb-0">Итого: <strong id="ticket-total">0 руб.</strong></p>
-            <div class="alert alert-success mt-3 mb-0 d-none" id="ticket-success" role="alert">
+<nav class="navbar navbar-expand-lg navbar-dark site-navbar sticky-top"><div class="container"><a class="navbar-brand d-flex align-items-center gap-3" href="index.html"><img alt="Логотип-компас планетария Орбита" class="brand-logo" height="54" src="images/orbita-compass-logo.png" width="54"/><span class="brand-copy"><span class="brand-name">ОРБИТА</span><span class="brand-caption">ПЛАНЕТАРИЙ · ПУТЕШЕСТВИЕ ПО ВСЕЛЕННОЙ</span></span></a><button aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню" class="navbar-toggler" data-bs-target="#mainNavbar" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="mainNavbar"><ul class="navbar-nav ms-auto align-items-lg-center"><li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li><li class="nav-item"><a class="nav-link" href="afisha.html">Афиша</a></li><li class="nav-item"><a class="nav-link" href="catalog.html">Программы</a></li><li class="nav-item"><a aria-current="page" class="nav-link active" href="services.html">Услуги</a></li><li class="nav-item"><a class="nav-link" href="about.html">О компании</a></li><li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li></ul><a class="btn btn-warning ms-lg-3 mt-2 mt-lg-0" href="order.html">Купить билет</a></div></div></nav>
+<main class="container my-5">
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+<li aria-current="page" class="breadcrumb-item active">Услуги</li>
+</ol>
+</nav>
+<h1 class="mb-4">Планетарий также предлагает</h1>
+<section class="row g-4 align-items-center mb-5" id="service-1">
+<div class="col-12 col-lg-6">
+<img alt="Школьные экскурсии" class="img-fluid rounded shadow-sm w-100 service-photo" src="images/kids.jpg"/>
+</div>
+<div class="col-12 col-lg-6">
+<h2 class="h3">Школьные экскурсии</h2>
+<p class="text-muted">Сеанс в куполе и рассказ астронома по школьной программе: от Солнечной системы для младших классов до устройства Вселенной для старших.</p>
+<ul><li>Для 1–11 классов</li><li>Длительность 60 минут</li><li>Группа до 30 человек</li></ul>
+<p class="fs-5 fw-bold">от 250 руб. с человека</p>
+<a class="btn btn-primary me-2" href="order.html">Оставить заявку</a>
+<button aria-controls="sr-1" aria-expanded="false" class="btn btn-outline-secondary" data-bs-target="#sr-1" data-bs-toggle="collapse" data-review-toggle="s1" type="button">Отзывы</button>
+</div>
+<div class="col-12">
+<div class="collapse" id="sr-1">
+<div class="reviews-block" data-reviews="s1"></div>
+</div>
+</div>
+</section>
+<section class="row g-4 align-items-center mb-5" id="service-2">
+<div class="col-12 col-lg-6">
+<img alt="Дни рождения под звёздами" class="img-fluid rounded shadow-sm w-100 service-photo" src="images/night-sky.jpg"/>
+</div>
+<div class="col-12 col-lg-6">
+<h2 class="h3">Дни рождения под звёздами</h2>
+<p class="text-muted">Ведущий проведёт сеанс о звёздах, а именинник получит подарок и сертификат на именную звезду.</p>
+<ul><li>Праздник 90 минут</li><li>До 15 гостей</li><li>Сеанс в куполе и чаепитие</li></ul>
+<p class="fs-5 fw-bold">от 8000 руб.</p>
+<a class="btn btn-primary me-2" href="order.html">Оставить заявку</a>
+<button aria-controls="sr-2" aria-expanded="false" class="btn btn-outline-secondary" data-bs-target="#sr-2" data-bs-toggle="collapse" data-review-toggle="s2" type="button">Отзывы</button>
+</div>
+<div class="col-12">
+<div class="collapse" id="sr-2">
+<div class="reviews-block" data-reviews="s2"></div>
+</div>
+</div>
+</section>
+<section class="row g-4 align-items-center mb-5" id="service-3">
+<div class="col-12 col-lg-6">
+<img alt="Лекторий для взрослых" class="img-fluid rounded shadow-sm w-100 service-photo" src="images/cluster.jpg"/>
+</div>
+<div class="col-12 col-lg-6">
+<h2 class="h3">Лекторий для взрослых</h2>
+<p class="text-muted">Астрономы и популяризаторы науки рассказывают о чёрных дырах, экзопланетах и истории космонавтики.</p>
+<ul><li>Вечерние лекции</li><li>Раз в неделю</li><li>Вход свободный по билету</li></ul>
+<p class="fs-5 fw-bold">500 руб. за лекцию</p>
+<a class="btn btn-primary me-2" href="order.html">Оставить заявку</a>
+<button aria-controls="sr-3" aria-expanded="false" class="btn btn-outline-secondary" data-bs-target="#sr-3" data-bs-toggle="collapse" data-review-toggle="s3" type="button">Отзывы</button>
+</div>
+<div class="col-12">
+<div class="collapse" id="sr-3">
+<div class="reviews-block" data-reviews="s3"></div>
+</div>
+</div>
+</section>
+<section class="row g-4 align-items-center mb-5" id="service-4">
+<div class="col-12 col-lg-6">
+<img alt="Аренда зала" class="img-fluid rounded shadow-sm w-100 service-photo" src="images/milky-way.jpg"/>
+</div>
+<div class="col-12 col-lg-6">
+<h2 class="h3">Аренда зала</h2>
+<p class="text-muted">Проведите презентацию, лекцию или показ фильма под куполом планетария.</p>
+<ul><li>Зал на 80 мест</li><li>Проектор и звук</li><li>Подходит для конференций</li></ul>
+<p class="fs-5 fw-bold">от 15000 руб. в час</p>
+<a class="btn btn-primary me-2" href="order.html">Оставить заявку</a>
+<button aria-controls="sr-4" aria-expanded="false" class="btn btn-outline-secondary" data-bs-target="#sr-4" data-bs-toggle="collapse" data-review-toggle="s4" type="button">Отзывы</button>
+</div>
+<div class="col-12">
+<div class="collapse" id="sr-4">
+<div class="reviews-block" data-reviews="s4"></div>
+</div>
+</div>
+</section>
+<section class="row g-4 align-items-center mb-5" id="service-5">
+<div class="col-12 col-lg-6">
+<img alt="Мобильный планетарий" class="img-fluid rounded shadow-sm w-100 service-photo" src="images/solar-system.jpg"/>
+</div>
+<div class="col-12 col-lg-6">
+<h2 class="h3">Мобильный планетарий</h2>
+<p class="text-muted">Надувной купол с проектором приедет в вашу школу, детский сад или на праздник и превратит обычный зал в звёздное небо.</p>
+<ul><li>Купол на 25 человек</li><li>Сеанс 40 минут</li><li>Выезд по городу и области</li></ul>
+<p class="fs-5 fw-bold">от 12000 руб. за выезд</p>
+<a class="btn btn-primary me-2" href="order.html">Оставить заявку</a>
+<button aria-controls="sr-5" aria-expanded="false" class="btn btn-outline-secondary" data-bs-target="#sr-5" data-bs-toggle="collapse" data-review-toggle="s5" type="button">Отзывы</button>
+</div>
+<div class="col-12">
+<div class="collapse" id="sr-5">
+<div class="reviews-block" data-reviews="s5"></div>
+</div>
+</div>
+</section>
+<section class="row g-4 align-items-center mb-5" id="service-6">
+<div class="col-12 col-lg-6">
+<img alt="Детский астрокружок" class="img-fluid rounded shadow-sm w-100 service-photo" src="images/service-02.jpg"/>
+</div>
+<div class="col-12 col-lg-6">
+<h2 class="h3">Детский астрокружок</h2>
+<p class="text-muted">Регулярные занятия для детей 7–12 лет: строим модели планет, ставим опыты и наблюдаем за небом в телескоп.</p>
+<ul><li>Раз в неделю по 90 минут</li><li>Группа до 12 детей</li><li>Первое занятие пробное</li></ul>
+<p class="fs-5 fw-bold">3200 руб. в месяц</p>
+<a class="btn btn-primary me-2" href="order.html">Оставить заявку</a>
+<button aria-controls="sr-6" aria-expanded="false" class="btn btn-outline-secondary" data-bs-target="#sr-6" data-bs-toggle="collapse" data-review-toggle="s6" type="button">Отзывы</button>
+</div>
+<div class="col-12">
+<div class="collapse" id="sr-6">
+<div class="reviews-block" data-reviews="s6"></div>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer"><div class="container"><div class="row g-4 footer-main">
+<div class="col-12 col-lg-3"><a class="footer-brand-link d-flex align-items-center gap-3 text-decoration-none" href="index.html"><img alt="Логотип-компас планетария Орбита" class="brand-logo footer-logo" height="52" src="images/orbita-compass-logo.png" width="52"/><span class="brand-copy"><span class="brand-name">ОРБИТА</span><span class="brand-caption">ПЛАНЕТАРИЙ</span></span></a><p class="footer-description mt-3">Путешествие по Вселенной для детей и взрослых.</p></div>
+<div class="col-6 col-lg-2"><h2 class="footer-heading">Навигация</h2><ul class="footer-links"><li><a href="index.html">Главная</a></li><li><a href="afisha.html">Афиша</a></li><li><a href="catalog.html">Программы</a></li><li><a href="services.html">Услуги</a></li><li><a href="about.html">О компании</a></li><li><a href="contacts.html">Контакты</a></li></ul></div>
+<div class="col-6 col-lg-3"><h2 class="footer-heading">Контакты</h2><ul class="footer-contacts"><li><span class="contact-symbol">⌖</span><span>Москва, ул. Звёздная, 1</span></li><li><span class="contact-symbol">☎</span><span><a href="tel:+74951234567">+7 (495) 123-45-67</a><br/><small>Звонки ежедневно: 10:00–19:30</small></span></li><li><span class="contact-symbol">✉</span><a href="mailto:info@orbita-planetarium.example">info@orbita-planetarium.example</a></li></ul><a class="footer-map-button" href="contacts.html">Контакты и карта</a></div>
+<div class="col-12 col-lg-4"><h2 class="footer-heading">Время работы</h2><p class="footer-hours mb-3">Ежедневно<br/><strong>10:00–20:00</strong></p><a class="btn btn-warning" href="order.html">Купить билет</a></div></div>
+<div class="footer-bottom mt-4 pt-3 d-flex flex-wrap justify-content-between gap-2"><span>© 2026 Планетарий «Орбита». Все права защищены.</span><a href="contacts.html">Контакты</a></div></div></footer>
+<div aria-hidden="true" aria-labelledby="ticketModalLabel" class="modal fade" id="ticketModal" tabindex="-1">
+<div class="modal-dialog">
+<div class="modal-content">
+<form id="ticketForm">
+<div class="modal-header">
+<h2 class="modal-title h5" id="ticketModalLabel">Покупка билета</h2>
+<button aria-label="Закрыть" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+</div>
+<div class="modal-body">
+<div class="mb-3">
+<label class="form-label" for="ticket-program">Программа</label>
+<select class="form-select" id="ticket-program" required="">
+<option data-price="400" value="1">Путешествие по Солнечной системе — 400 руб.</option>
+<option data-price="600" value="2">Чёрные дыры — 600 руб.</option>
+<option data-price="900" value="3">Ночные наблюдения в телескоп — 900 руб.</option>
+<option data-price="500" value="4">Галактики и Большой взрыв — 500 руб.</option>
+<option data-price="350" value="5">Луна: наш ближайший сосед — 350 руб.</option>
+<option data-price="400" value="6">Наша звезда — Солнце — 400 руб.</option>
+<option data-price="450" value="7">Сатурн и его кольца — 450 руб.</option>
+<option data-price="550" value="8">Туманности: рождение звёзд — 550 руб.</option>
+<option data-price="380" value="9">Кометы и астероиды — 380 руб.</option>
+</select>
+</div>
+<div class="row g-3 mb-3">
+<div class="col-7">
+<label class="form-label" for="ticket-date">Дата</label>
+<input class="form-control" id="ticket-date" required="" type="date"/>
+</div>
+<div class="col-5">
+<label class="form-label" for="ticket-time">Время</label>
+<input class="form-control" id="ticket-time" required="" type="time"/>
+</div>
+</div>
+<div class="row g-3 mb-3">
+<div class="col-6">
+<label class="form-label" for="ticket-name">Имя</label>
+<input class="form-control" id="ticket-name" required="" type="text"/>
+</div>
+<div class="col-6">
+<label class="form-label" for="ticket-phone">Телефон</label>
+<input class="form-control" id="ticket-phone" required="" type="tel"/>
+</div>
+</div>
+<div class="mb-3">
+<label class="form-label" for="ticket-count">Количество билетов</label>
+<input class="form-control" id="ticket-count" max="10" min="1" required="" type="number" value="1"/>
+</div>
+<div aria-live="polite" class="alert alert-light border mt-3 mb-3" id="seat-availability"><strong>Свободные места:</strong> выберите дату и время.</div>
+<p class="fs-5 mb-0">Итого: <strong id="ticket-total">0 руб.</strong></p>
+<div class="alert alert-success mt-3 mb-0 d-none" id="ticket-success" role="alert">
               Билеты забронированы. Мы позвоним для подтверждения.
             </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-            <button type="submit" class="btn btn-warning">Купить</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-  ></script>
-  <script src="js/data.js"></script>
-  <script src="js/reviews.js"></script>
-  <script src="js/news.js"></script>
-  <script src="js/dates.js"></script>
-  <script src="js/tickets.js"></script>
-  <script src="js/ticket-capacity.js"></script>
-</body>
+</div>
+<div class="modal-footer">
+<button class="btn btn-secondary" data-bs-dismiss="modal" type="button">Закрыть</button>
+<button class="btn btn-warning" type="submit">Купить</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script><script src="js/data.js"></script><script src="js/reviews.js"></script><script src="js/dates.js"></script><script src="js/tickets.js"></script><script src="js/ticket-capacity.js"></script></body>
 </html>

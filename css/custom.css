@@ -677,3 +677,16 @@ footer.site-footer, .site-footer {
   main > .container.my-5 { padding:1.15rem; }
   .site-footer .container { padding-left:1.25rem; padding-right:1.25rem; }
 }
+
+/* Multi-page navigation, contacts and embedded Yandex map */
+.about-teaser,.contact-info-panel{background:linear-gradient(135deg,#102b50,#071a33);color:#f6f3eb;border:1px solid rgba(243,189,69,.25)}
+.about-teaser p,.contact-info-panel .text-muted{color:#c6d3e2!important}
+.contact-info-panel a{color:#f3bd45}
+.map-frame{min-height:430px;background:#0b1d34;border:1px solid rgba(243,189,69,.35)}
+.map-frame iframe{display:block;min-height:430px}
+.site-navbar .navbar-nav{gap:.15rem}
+.site-navbar .nav-link{white-space:nowrap}
+.site-footer .footer-map-button{display:inline-flex;align-items:center;justify-content:center;padding:.65rem 1rem;border:1px solid var(--orbita-gold);border-radius:.65rem;color:var(--orbita-gold);text-decoration:none}
+.site-footer .footer-map-button:hover{background:var(--orbita-gold);color:#071a33!important}
+.site-footer .footer-contacts small{color:#b9c7d8}
+.service-card .card-img-overlay{background:linear-gradient(180deg,transparent 25%,rgba(3,12,25,.88))}
