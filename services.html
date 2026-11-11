@@ -13,6 +13,8 @@
 
 <!DOCTYPE html>
 
+<!DOCTYPE html>
+
 <html lang="ru">
 <head><script data-orbita-theme-init="true">try{var t=localStorage.getItem('orbita-theme-v1');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-orbita-theme',t);else if(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.setAttribute('data-orbita-theme','dark');}catch(e){}</script>
 <meta charset="utf-8"/>
@@ -23,8 +25,17 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark site-navbar sticky-top"><div class="container"><a class="navbar-brand d-flex align-items-center gap-3" href="index.html"><img alt="Логотип-компас планетария Орбита" class="brand-logo" height="54" src="images/orbita-compass-logo.png" width="54"/><span class="brand-copy"><span class="brand-name">ОРБИТА</span><span class="brand-caption">ПЛАНЕТАРИЙ · ПУТЕШЕСТВИЕ ПО ВСЕЛЕННОЙ</span></span></a><button aria-controls="mainNavbar" aria-expanded="false" aria-label="Открыть меню" class="navbar-toggler" data-bs-target="#mainNavbar" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="mainNavbar"><ul class="navbar-nav ms-auto align-items-lg-center"><li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li><li class="nav-item"><a class="nav-link" href="afisha.html">Афиша</a></li><li class="nav-item"><a class="nav-link" href="catalog.html">Программы</a></li><li class="nav-item"><a aria-current="page" class="nav-link active" href="services.html">Услуги</a></li><li class="nav-item"><a class="nav-link" href="about.html">О компании</a></li><li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li></ul><div class="orbita-global-tools d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0">
-<button aria-label="Включить тёмную тему" class="btn btn-outline-light btn-sm orbita-icon-btn" id="orbita-theme-toggle" title="Сменить тему" type="button">
-<span aria-hidden="true" class="theme-icon theme-icon-moon">☾</span><span aria-hidden="true" class="theme-icon theme-icon-sun">☀</span>
+<button aria-label="Переключить тему" class="btn btn-outline-light btn-sm orbita-icon-btn" id="orbita-theme-toggle" title="Сменить тему" type="button">
+<span aria-hidden="true" class="theme-orbit">
+<svg class="theme-svg theme-moon" focusable="false" viewbox="0 0 24 24">
+<path d="M20.2 15.4A8.4 8.4 0 0 1 8.6 3.8 8.6 8.6 0 1 0 20.2 15.4Z"></path>
+<path class="theme-star" d="M17.7 3.2v3.1M16.15 4.75h3.1"></path>
+</svg>
+<svg class="theme-svg theme-sun" focusable="false" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="4.1"></circle>
+<path d="M12 1.8v2.1M12 20.1v2.1M4.8 4.8l1.5 1.5m11.4 11.4 1.5 1.5M1.8 12h2.1m16.2 0h2.1M4.8 19.2l1.5-1.5M17.7 6.3l1.5-1.5"></path>
+</svg>
+</span>
 </button>
 <button aria-label="Поиск по сайту" class="btn btn-outline-light btn-sm orbita-icon-btn" data-orbita-search-open="" title="Поиск" type="button"><span aria-hidden="true">⌕</span></button>
 <a aria-label="Личный кабинет" class="btn btn-outline-light btn-sm orbita-account-link" href="account.html"><span aria-hidden="true">♙</span><span class="d-lg-none ms-1">Личный кабинет</span></a>
