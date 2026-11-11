@@ -690,3 +690,26 @@ footer.site-footer, .site-footer {
 .site-footer .footer-map-button:hover{background:var(--orbita-gold);color:#071a33!important}
 .site-footer .footer-contacts small{color:#b9c7d8}
 .service-card .card-img-overlay{background:linear-gradient(180deg,transparent 25%,rgba(3,12,25,.88))}
+
+/* Additional page content: calm spacing, consistent with the existing Orbit design */
+.orbit-extra-section { margin-top:3.25rem !important; margin-bottom:3.25rem !important; }
+.orbit-info-card { border:1px solid #e2e8f0 !important; border-radius:1rem; background:#fff; }
+.orbit-info-card .card-body { color:#243247; }
+.orbit-info-icon { display:flex; align-items:center; justify-content:center; width:42px; height:42px; margin-bottom:1rem; border-radius:50%; color:#14263d; background:rgba(243,189,69,.22); font-size:1.35rem; font-weight:700; }
+.orbit-highlight { color:#f5f7fb; background:linear-gradient(135deg,#102b50,#071a33); border:1px solid rgba(243,189,69,.28); }
+.orbit-highlight p,.orbit-highlight li { color:#d3deeb; }
+.orbit-highlight-light { color:#243247; background:#f3f6fa; border:1px solid #e0e6ef; }
+.orbit-highlight-light p { color:#526174; }
+.orbit-mini-panel { background:#f4f7fb; border:1px solid #e1e8f0; }
+.orbit-mini-panel h3 { color:#142b49; }
+.orbit-mini-panel p { color:#536276; }
+/* Ensure yellow CTA buttons always have readable dark text, including inside contact panels. */
+.btn-warning, a.btn-warning, button.btn-warning,
+.contact-info-panel a.btn-warning {
+  color:#14263d !important;
+  font-weight:700 !important;
+}
+.btn-warning:hover, a.btn-warning:hover, button.btn-warning:hover,
+.contact-info-panel a.btn-warning:hover {
+  color:#10223a !important;
+}
