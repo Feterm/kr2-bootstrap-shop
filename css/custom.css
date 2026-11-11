@@ -521,3 +521,159 @@ body { color: var(--orbita-text); background: #f7f8fb; }
 .footer-map-button:hover { color:#071a33; background:#f3bd45; }
 .footer-bottom { border-top:1px solid rgba(220,230,243,.18); color:#9fb0c4; font-size:.78rem; }
 @media (max-width: 575.98px) { .brand-caption { font-size:.43rem; } .brand-compass { width:42px; height:42px; } .about-compass-art { min-height:235px; } .site-topline .container { justify-content:center!important; } }
+
+/* ===== Финальная корректировка фирменной шапки и общей геометрии ===== */
+:root {
+  --orbita-navy: #061326;
+  --orbita-blue: #0b2341;
+  --orbita-blue-soft: #14365d;
+  --orbita-gold: #f3bd45;
+  --orbita-page: #eef2f7;
+  --orbita-ink: #17263b;
+}
+html, body { width: 100%; min-height: 100%; }
+html { overflow-x: clip; }
+body {
+  margin: 0;
+  color: var(--orbita-ink);
+  background: var(--orbita-page) !important;
+  overflow-x: clip;
+}
+/* A single-row header replaces the awkward two-level header. */
+.site-navbar,
+nav.site-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  width: 100%;
+  min-height: 82px;
+  padding: .65rem 0;
+  background: linear-gradient(110deg, #061326 0%, #0b2341 58%, #102d50 100%) !important;
+  border-bottom: 1px solid rgba(243,189,69,.24);
+  box-shadow: 0 7px 24px rgba(3,12,26,.25);
+}
+.site-navbar > .container {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+.site-navbar .navbar-brand {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: .8rem !important;
+  margin: 0;
+  padding: .1rem 0;
+  color: #fff !important;
+  white-space: nowrap;
+}
+.brand-logo {
+  display: block;
+  width: 54px;
+  height: 54px;
+  flex: 0 0 54px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(243,189,69,.22));
+}
+.brand-copy { display:flex; flex-direction:column; justify-content:center; line-height:1.05; }
+.brand-name { color:#fff !important; font-size:1.25rem; font-weight:800; letter-spacing:.16em; }
+.brand-caption { display:block; margin-top:.32rem; color:#bdcadd !important; font-size:.55rem; letter-spacing:.105em; white-space:normal; }
+.site-navbar .navbar-collapse { align-items:center; }
+.site-navbar .navbar-nav { gap:.15rem; align-items:center; }
+.site-navbar .nav-link {
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  min-height:42px;
+  padding:.55rem .78rem !important;
+  color:#e7edf6 !important;
+  font-size:.94rem;
+  font-weight:600;
+  white-space:nowrap;
+  border-radius:999px;
+  transition: color .2s ease, background-color .2s ease;
+}
+.site-navbar .nav-link::after { display:none !important; }
+.site-navbar .nav-link:hover,
+.site-navbar .nav-link:focus-visible,
+.site-navbar .nav-link.active {
+  color:var(--orbita-gold) !important;
+  background:rgba(243,189,69,.11);
+}
+.site-navbar .btn-warning {
+  min-height:44px;
+  margin-left:1rem !important;
+  padding:.65rem 1.15rem;
+  color:#17263b !important;
+  background:linear-gradient(135deg,#ffd36a,#f0ad25) !important;
+  border:1px solid #f3bd45 !important;
+  border-radius:999px;
+  font-weight:700;
+  white-space:nowrap;
+  box-shadow:0 5px 14px rgba(243,189,69,.17);
+}
+.site-navbar .btn-warning:hover { background:#ffda83 !important; }
+.site-navbar .navbar-toggler {
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:.65rem;
+  padding:.45rem .65rem;
+}
+.site-navbar .navbar-toggler:focus { box-shadow:0 0 0 .2rem rgba(243,189,69,.25); }
+.site-navbar .navbar-toggler-icon { filter:brightness(0) invert(1); }
+/* Keep every content section within the viewport and visually separated. */
+main { display:block; width:100%; }
+main > section:not(.hero) { position:relative; }
+main > .container,
+main > section > .container { max-width:1140px; }
+main > .container.my-5 { padding:2rem; background:#fff; border:1px solid #e0e6ef; border-radius:1.1rem; box-shadow:0 10px 28px rgba(20,43,73,.055); }
+.card, .catalog-tools, .reviews-block, .review-carousel, .accordion-item { border-color:#e0e6ef; }
+.card:hover, .recent-card:hover { transform:translateY(-3px); }
+/* Footer is a full-width dark band, including the container's surrounding area. */
+footer.site-footer, .site-footer {
+  display:block;
+  width:100%;
+  margin:0 !important;
+  padding:0;
+  color:#dce6f3 !important;
+  background:linear-gradient(115deg,#041020 0%,#081a31 55%,#0d2948 100%) !important;
+  border-top:2px solid rgba(243,189,69,.62);
+}
+.site-footer .container { max-width:1200px; }
+.site-footer .brand-logo { width:48px; height:48px; flex-basis:48px; }
+.site-footer .brand-name { color:#fff !important; }
+.site-footer .brand-caption { color:#b9c8da !important; }
+.site-footer .footer-heading { color:#f3bd45 !important; }
+.site-footer .footer-description,
+.site-footer .footer-hours,
+.site-footer .footer-bottom { color:#b9c8da !important; }
+.site-footer .footer-links a,
+.site-footer .footer-contacts a { color:#e0e8f2 !important; text-decoration:none; }
+.site-footer .footer-links a:hover,
+.site-footer .footer-contacts a:hover { color:#f3bd45 !important; }
+.site-footer .footer-map-button { color:#f3bd45 !important; }
+.site-footer .footer-map-button:hover { color:#071a33 !important; }
+@media (max-width: 1199.98px) {
+  .site-navbar .nav-link { padding-left:.55rem !important; padding-right:.55rem !important; font-size:.88rem; }
+  .brand-caption { max-width:230px; }
+}
+@media (max-width: 991.98px) {
+  .site-navbar { min-height:72px; }
+  .site-navbar > .container { flex-wrap:wrap; }
+  .site-navbar .navbar-collapse {
+    flex-basis:100%;
+    width:100%;
+    padding:.75rem 0 .35rem;
+    border-top:1px solid rgba(255,255,255,.12);
+    margin-top:.45rem;
+  }
+  .site-navbar .navbar-nav { align-items:stretch; gap:.15rem; }
+  .site-navbar .nav-link { width:100%; padding:.65rem .8rem !important; }
+  .site-navbar .btn-warning { margin:.65rem 0 0 !important; width:100%; }
+}
+@media (max-width: 575.98px) {
+  .brand-logo { width:46px; height:46px; flex-basis:46px; }
+  .brand-name { font-size:1.05rem; }
+  .brand-caption { max-width:185px; font-size:.48rem; line-height:1.25; }
+  main > .container.my-5 { padding:1.15rem; }
+  .site-footer .container { padding-left:1.25rem; padding-right:1.25rem; }
+}
